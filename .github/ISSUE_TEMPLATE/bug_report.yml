@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible issue with the skill or repository.
+title: "[Bug]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      placeholder: "0.1.4"
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task and minimal input
+      description: Do not include secrets, personal data, private source code, or correspondence.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Checks performed and limitations

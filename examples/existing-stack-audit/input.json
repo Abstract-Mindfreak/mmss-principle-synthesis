@@ -1,0 +1,14 @@
+{
+  "modules": [
+    {
+      "id": "validate",
+      "responsibility": "Validate a record",
+      "depends_on": []
+    },
+    {
+      "id": "validate",
+      "responsibility": "Format validation findings",
+      "depends_on": ["missing-normalizer"]
+    }
+  ]
+}
