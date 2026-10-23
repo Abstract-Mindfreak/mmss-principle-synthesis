@@ -2,15 +2,15 @@
 
 Синтез архитектур с учётом источников и границ выводов для ИИ-агентов.
 
-Создание, аудит, исправление, расширение и перенос модульных архитектур MMSS/AMMS на основе источников, требований или существующих систем.
+Создание, аудит, исправление, расширение и перенос модульных архитектур MMSS на основе источников, требований или существующих систем.
 
 [English](README.md) · [Русский](README.ru.md)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.4](https://img.shields.io/badge/skill-0.1.4-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.5](https://img.shields.io/badge/skill-0.1.5-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
 
 ## Обзор
 
-MMSS Principle Synthesis — это Agent Skill: файл инструкций для структурированной работы ИИ-агента с архитектурами. MMSS и AMMS — проектные архитектурные термины; репозиторий не предлагает их расшифровок.
+MMSS Principle Synthesis — это Agent Skill: файл инструкций для структурированной работы ИИ-агента с архитектурами. MMSS — проектный архитектурный термин; репозиторий не предлагает его расшифровку.
 
 ## Возможности
 

@@ -2,15 +2,15 @@
 
 Evidence-aware architecture synthesis for AI agents.
 
-Create, audit, repair, extend, and transfer modular MMSS/AMMS architectures from sources, requirements, or existing stacks.
+Create, audit, repair, extend, and transfer modular MMSS architectures from sources, requirements, or existing stacks.
 
 [English](README.md) · [Русский](README.ru.md)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.4](https://img.shields.io/badge/skill-0.1.4-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.5](https://img.shields.io/badge/skill-0.1.5-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
 
 ## Overview
 
-MMSS Principle Synthesis is an Agent Skill: an instruction file that helps an AI agent perform structured architecture work. MMSS and AMMS are project-defined architectural terms; this repository does not assign expansions to them.
+MMSS Principle Synthesis is an Agent Skill: an instruction file that helps an AI agent perform structured architecture work. MMSS is a project-defined architectural term; this repository does not assign an expansion to it.
 
 ## Capabilities
 

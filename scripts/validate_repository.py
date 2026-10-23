@@ -88,8 +88,8 @@ def parse_frontmatter(path: Path, errors: list[str]) -> None:
     if not top.get("description", "").strip():
         errors.append("frontmatter description must be non-empty")
     metadata_match = re.search(r"(?m)^  version:\s*[\"']?([^\"'\s]+)", block)
-    if not metadata_match or metadata_match.group(1) != "0.1.4":
-        errors.append("frontmatter metadata.version must be 0.1.4")
+    if not metadata_match or metadata_match.group(1) != "0.1.5":
+        errors.append("frontmatter metadata.version must be 0.1.5")
 
 
 def check_links(errors: list[str]) -> None:
@@ -127,7 +127,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print(f"Repository validation passed: {len(REQUIRED_FILES)} required files, skill version 0.1.4, JSON fixture, and local Markdown file links.")
+    print(f"Repository validation passed: {len(REQUIRED_FILES)} required files, skill version 0.1.5, JSON fixture, and local Markdown file links.")
     return 0
 
 

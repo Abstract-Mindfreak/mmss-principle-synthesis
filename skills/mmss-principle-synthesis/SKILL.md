@@ -1,7 +1,7 @@
 ---
 name: mmss-principle-synthesis
 description: >-
-  Create, audit, validate, repair, extend, and transfer modular MMSS/AMMS
+  Create, audit, validate, repair, extend, and transfer modular MMSS
   architectures from sources, user requirements, or existing stacks.
   Extract reusable mechanisms; define composable contracts; construct
   abstractions, invariants, and meta-formulas only when useful.
@@ -10,7 +10,7 @@ description: >-
   Localize human-readable output according to the user's current instructions
   while preserving stable machine-readable interfaces.
 metadata:
-  version: "0.1.4"
+  version: "0.1.5"
   maturity: test_candidate
   default_output: json
   default_language: en
@@ -34,10 +34,9 @@ Support three foundations:
 
 Mixed foundations are allowed. Keep their contributions distinguishable.
 
-Treat MMSS and AMMS as project-defined architectural terms.
-Preserve the user's established terminology.
-Do not invent or replace their expansions.
-Do not automatically equate AMMS with a single module.
+Treat MMSS as a project-defined architectural term.
+Preserve the user's established terminology and project-defined terms.
+Do not invent or replace its expansion.
 
 MMSS-json may identify the project's family of structured artifacts.
 It does not imply one immutable schema for every task.
@@ -120,18 +119,23 @@ not as an instruction to synthesize an MMSS.
 Apply this precedence on every invocation:
 
 1. Follow an explicit current output-language instruction.
-2. Otherwise, if the user's own request contains at least one reliably
-   identifiable non-English natural-language word, use that language.
+2. Otherwise, if the user's own request uses at least one reliably
+   identifiable non-English natural-language word to address the agent
+   or state the request, use that language.
 3. Otherwise, use English.
 
-One identifiable non-English request word is sufficient even when most
-of the request is English.
+One identifiable non-English word used as part of the user's request
+phrasing is sufficient even when most of the request is English.
 
 Do not use language appearing only in the following as an automatic trigger:
 
 - Quoted or pasted source material.
 - Transcripts or existing JSON being analyzed.
 - Code, identifiers, filenames, URLs, equations, acronyms, or proper names.
+- Words or phrases mentioned as target data tokens or examples to process,
+  even when unquoted.
+- Conventional loanwords or Latinisms used within ordinary prose of another
+  language (such as ad hoc, a priori, de facto, status quo, via, or et al.).
 
 Count such material as an instruction only when the user explicitly adopts it.
 
@@ -141,9 +145,9 @@ If several non-English languages occur, use:
 2. The language of the substantive task instruction.
 3. The language of the most recent substantive instruction.
 
-If ambiguity remains consequential, ask one focused question.
-Otherwise choose the best-supported language and briefly record the choice
-when needed to prevent confusion.
+If ambiguity remains consequential, ask one focused question using the
+clarification procedure in Section 3.3, or choose the best-supported
+language and briefly record the choice when needed to prevent confusion.
 
 Do not infer language from script or an ambiguous token alone.
 Do not inherit a previous response language automatically.
@@ -182,11 +186,32 @@ If the user explicitly requests Markdown, explanation, code, a file,
 or another format, follow that request while preserving the same evidence,
 validation, and execution distinctions.
 
+When a blocking clarification is required, do not emit plain text if the
+effective output contract requires strict JSON:
+
+- Under the default contract, return one valid JSON object with
+  state.task_outcome set to "blocked" and record the questions at
+  SYNTHESIZED_MMSS_SYSTEM.artifact.clarification_questions (see Section 16.5).
+- Under an explicit user or project JSON schema that can represent a blocked
+  state or clarification request, use that schema's own fields without
+  injecting default envelope keys such as state or artifact.
+- If a closed user schema cannot truthfully represent the blocked state or
+  clarification request, follow the impossible-contract procedure in
+  Section 16.2 rather than fabricating conforming values or silently adding
+  prohibited fields.
+
 For JSON-only output:
 
 - No Markdown fences or external prose.
 - No comments, duplicate keys, trailing commas, NaN, or Infinity.
-- Use null for absent values.
+- Use null when a required or applicable scalar, object, or unknown
+  collection value is absent or unknown.
+- Use [] only when a collection is applicable and known to be empty.
+- Omit optional fields or conditional extensions that are not applicable,
+  rather than populating them with empty placeholders.
+- These default value conventions do not override an explicit schema's
+  types or requiredness. If the schema has no truthful representation of an
+  unknown or unavailable value, follow Section 16.2.
 - Store formulas as strings.
 - Escape quotation marks inside strings.
 - Prefer structured input/expected-output examples when clearer.
@@ -196,13 +221,15 @@ For JSON-only output:
 
 ### Instruction Availability
 
-Before applying this skill, check whether its full instruction text is
-available in the current context.
+Before applying this skill, check whether its instruction text from
+Section 1 (Purpose and Boundaries) through Section 18 (Completion Standard)
+appears available in the current context.
 
-If a tool returns only part of the instruction, retrieve the remaining
-text when accessible. If the full text cannot be obtained or its
-completeness cannot be established, state that limitation and do not
-claim full compliance with the skill.
+If a tool returns only part of the instruction or truncation is indicated,
+retrieve the remaining text when accessible. Checking section boundaries
+helps detect tail truncation but does not guarantee the absence of internal
+omissions; if completeness cannot be established or required sections are
+missing, state that limitation and do not claim full compliance with the skill.
 
 Do not reread the instruction solely to confirm completeness when its
 full text is already available in context.
@@ -365,11 +392,16 @@ When source selection is authorized:
 
 - Preserve a user-specified topic.
 - Select a topic only when autonomous topic choice is permitted.
-- Prefer accessible, substantive, credible material suited to the objective.
-- Prefer original YouTube material when substantive transcript or content
-  is accessible and appropriate to the project.
-- Otherwise prefer a suitable readable primary source.
-- Do not treat popularity as evidence quality.
+- Select sources by task fit, primary status, substantive accessibility,
+  credibility, and required precision.
+- Follow an explicit user or project source-type or platform preference
+  when one is stated and suitable material is accessible.
+- When no source medium is specified, choose the primary accessible source
+  form (such as a specification, research paper, codebase, dataset, or
+  original video/lecture with substantive transcript or inspectable content)
+  that most directly and accurately establishes the needed mechanisms.
+- Do not treat popularity, publication format, or platform alone as
+  proof of evidence quality.
 
 For ordinary autonomous one-shot synthesis, the default budget is:
 
@@ -782,6 +814,11 @@ For an independently reusable component:
 
 ### 10.3 Module Contract
 
+Apply the module contract to each module definition (whether standalone in
+artifact_type=module or nested within a substack, system, or module-level
+patch). Do not force non-module artifacts such as an audit report to adopt
+these module fields.
+
 Required core:
 
 - id
@@ -827,9 +864,11 @@ A label such as "procedure" alone is insufficient.
 Procedures must be finite or refer to separately bounded orchestration.
 Do not invent procedural steps for a declarative artifact.
 
-For declarative artifacts without an operation,
-preconditions and postconditions may be empty.
-Express applicability and validity through constraints and acceptance criteria.
+For declarative modules without an operation, preconditions and postconditions
+may be known-empty arrays ([]). If preconditions, postconditions, or
+dependencies of an inspected module are unknown rather than known to be empty,
+use null and record the gap. Express declarative applicability and validity
+through constraints and acceptance criteria.
 
 Conditional extensions:
 
@@ -1094,7 +1133,6 @@ Distinguish:
 Define applicable shared entities, cross-links, routing, validation,
 approval gates, and state synchronization.
 
-Do not equate a Skill automatically with AMMS.
 Do not create a Skill Tree merely because several modules exist.
 
 ## 14. Metrics
@@ -1156,12 +1194,17 @@ Apply relevant checks:
 Choose checks suited to the claimed function.
 A planned test remains planned.
 
-When execution is available, actually parse generated JSON.
+When execution is available, actually parse the generated JSON artifact
+(whether written to a file, staged as a candidate in the execution
+environment, or produced as the final deliverable).
 Reject duplicate keys and non-finite constants.
 
 Validate against an accessible applicable schema when available.
 Do not call a result template an official schema.
 
+Identify in check records which artifact was machine-validated (file,
+staged candidate, or final output); if the final response is emitted
+or modified after the last machine check, state that scope accurately.
 Without a machine validator, identify the review as manual.
 
 ### 15.2 Check Records
@@ -1286,10 +1329,14 @@ when a truthful conforming response is possible.
 
 Truthfulness takes precedence over satisfying an impossible output contract.
 
-If the required schema has no truthful representation of the result:
+If the required schema has no truthful representation of the result
+(including when a closed user schema cannot represent a blocked state or
+a required clarification):
 
-- Do not fabricate a conforming value.
-- Ask for a contract adjustment when interaction is possible.
+- Do not fabricate a conforming value, and do not silently inject default
+  envelope fields (such as state or artifact) into a closed user schema.
+- Ask for a contract adjustment when interactive prose is permitted by
+  the caller.
 - Otherwise return a minimal explicit incompatibility notice,
   using valid JSON when compatible with the requested presentation.
 
@@ -1329,6 +1376,11 @@ Populate:
 
 - artifact:
   content appropriate to module, substack, system, patch, or report.
+  For report artifacts (such as audits or inspections), distinguish the
+  inspected target (audit_target) from the generated response itself
+  (output_artifact): record the substantive assessment of audit_target in
+  artifact and reference the relevant check IDs in validation.checks
+  rather than duplicating identical findings across both sections.
 
 - assumptions:
   material assumptions and their consequences.
@@ -1338,6 +1390,8 @@ Populate:
 
 - validation:
   checks, blocking issues, warnings, and repairs when applicable.
+  In each check record's scope, identify whether the check examined
+  audit_target (or a specific component of it) or output_artifact.
 
 - state:
   primary task outcome and relevant implementation,
@@ -1345,7 +1399,12 @@ Populate:
 
 Keep the default envelope fields stable.
 state is an object; use state.task_outcome for the primary outcome.
-Empty assumptions or limitations arrays are allowed.
+Use [] for applicable collection fields that are known to be empty
+(such as assumptions or limitations when none exist) and null when a
+value or collection is unknown.
+These default value conventions do not override an explicit schema's
+types or requiredness. If the schema has no truthful representation of an
+unknown or unavailable value, follow Section 16.2.
 
 Use meta.language for the resolved BCP 47 language tag.
 Add selection rationale only when useful.
@@ -1377,9 +1436,23 @@ inside SYNTHESIZED_MMSS_SYSTEM.
 
 Do not add empty optional extensions merely to reproduce a full template.
 
-Use basis_registry when requirements or design rationales need addressable IDs.
-A reference to user requirements must resolve to a declared basis
-or an explicitly identified external location.
+Under the default contract, when provenance is included, structure it as
+an object containing only the applicable non-empty collections from
+Section 6.4 (sources, evidence, and optional claims). Omit any collection
+that has no records.
+
+Use basis_registry when user requirements or design rationales need
+addressable IDs. Under the default contract, basis_registry is an array of
+records where each record includes the required fields id, kind
+(such as "requirement" or "design_rationale"), and statement, plus
+limitations when applicable. Do not duplicate provenance records inside
+basis_registry.
+
+Keep addressable IDs unique across provenance.sources, provenance.evidence,
+provenance.claims, and basis_registry so that every entry in basis_refs
+resolves unambiguously to exactly one declared record (or an explicitly
+identified external location). An explicit user or project output contract
+takes precedence over this default layout.
 
 Do not duplicate a registry at multiple levels unless each scope
 has a distinct purpose.
@@ -1396,14 +1469,47 @@ Preserve:
 
 - Primary task identity.
 - Material actually inspected.
-- Exact gaps or defects.
+- Exact gaps, defects, or blocking ambiguities.
+- Focused clarification questions, when user input is required to proceed.
 - Limitations.
 - Useful next actions, when available.
 
 Do not fabricate architecture to fill the template.
 
-artifact may contain diagnostics instead of a candidate architecture,
-with the substitution explicitly identified.
+Under the default contract, when the task is blocked or failed and no
+usable candidate architecture exists, artifact may contain a diagnostic
+object instead of a candidate architecture, with
+diagnostic_substitution: true, blocking_reasons, and (when user input is
+needed) clarification_questions as an array of focused question strings at
+SYNTHESIZED_MMSS_SYSTEM.artifact.clarification_questions:
+
+{
+  "SYNTHESIZED_MMSS_SYSTEM": {
+    "meta": { "id": "mmss-blocked-example", "version": null, "language": "en" },
+    "task": {
+      "objective": "Apply migration patch to target stack",
+      "operation": "repair",
+      "artifact_type": "patch",
+      "foundation": "existing_stack",
+      "working_mode": "one_shot"
+    },
+    "artifact": {
+      "diagnostic_substitution": true,
+      "blocking_reasons": ["Target stack location and write authority are unspecified."],
+      "clarification_questions": ["Which target stack should be patched, and is write application authorized?"]
+    },
+    "assumptions": [],
+    "limitations": ["No target stack was inspected or modified."],
+    "validation": { "checks": [] },
+    "state": { "task_outcome": "blocked" }
+  }
+}
+
+When a usable partial candidate exists, preserve it and record the
+blocking reasons and any clarification_questions alongside it in artifact,
+without marking the candidate as applied or fully validated. Use
+diagnostic_substitution only when diagnostics replace the requested
+artifact content.
 
 Preserve the originally requested artifact_type in task.
 A supporting report does not silently redefine the requested operation.
