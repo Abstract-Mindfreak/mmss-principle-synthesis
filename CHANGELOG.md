@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+
+- Added a composite edition with core instructions in `SKILL.md`, reference material in `ALL_REFERENCES.md`, and a section index in `DISPATCH.md`.
+- Preserved the previous 0.1.5 text as the separately named `mmss-principle-synthesis-monolithic` skill; only its frontmatter name changes to keep skill identities unique.
+- Added ten related skills as standalone packages under `skills/`.
+- Documented reference lookup as a reading convention; the package does not provide an executable runtime loader.
+
 ## 0.1.5
 
 - Clarified language selection, instruction completeness checks, source selection, and the scope of module contracts.

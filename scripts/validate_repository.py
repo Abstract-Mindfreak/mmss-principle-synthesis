@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skills" / "mmss-principle-synthesis"
+SKILLS_ROOT = ROOT / "skills"
 REQUIRED_FILES = (
     "README.md",
     "README.ru.md",
@@ -18,6 +18,9 @@ REQUIRED_FILES = (
     "CONTRIBUTING.md",
     ".gitignore",
     "skills/mmss-principle-synthesis/SKILL.md",
+    "skills/mmss-principle-synthesis/ALL_REFERENCES.md",
+    "skills/mmss-principle-synthesis/DISPATCH.md",
+    "skills/mmss-principle-synthesis-monolithic/SKILL.md",
     "examples/README.md",
     "examples/requirement-based-module/prompt.md",
     "examples/requirement-based-module/expected-properties.md",
@@ -48,7 +51,7 @@ def unique_object(pairs: list[tuple[str, object]]) -> dict[str, object]:
     return result
 
 
-def parse_frontmatter(path: Path, errors: list[str]) -> None:
+def parse_frontmatter(path: Path, errors: list[str], expected_version: str | None = None) -> None:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
         errors.append(f"{path.relative_to(ROOT)}: missing YAML frontmatter opener")
@@ -82,14 +85,16 @@ def parse_frontmatter(path: Path, errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)}:{line_number}: duplicate field {key!r}")
         top[key] = value
         current = key
-    expected_name = SKILL_DIR.name
+    expected_name = path.parent.name
     if top.get("name") != expected_name:
-        errors.append(f"frontmatter name must be {expected_name!r}")
+        errors.append(f"{path.relative_to(ROOT)}: frontmatter name must be {expected_name!r}")
     if not top.get("description", "").strip():
-        errors.append("frontmatter description must be non-empty")
+        errors.append(f"{path.relative_to(ROOT)}: frontmatter description must be non-empty")
     metadata_match = re.search(r"(?m)^  version:\s*[\"']?([^\"'\s]+)", block)
-    if not metadata_match or metadata_match.group(1) != "0.1.5":
-        errors.append("frontmatter metadata.version must be 0.1.5")
+    if not metadata_match:
+        errors.append(f"{path.relative_to(ROOT)}: frontmatter metadata.version is required")
+    elif expected_version and metadata_match.group(1) != expected_version:
+        errors.append(f"{path.relative_to(ROOT)}: frontmatter metadata.version must be {expected_version}")
 
 
 def check_links(errors: list[str]) -> None:
@@ -112,9 +117,12 @@ def main() -> int:
     license_text = (ROOT / "LICENSE").read_text(encoding="utf-8") if (ROOT / "LICENSE").exists() else ""
     if "Copyright (c) 2026 Andrey Mundrievskiy (Abstract-Mindfreak)" not in license_text:
         errors.append("LICENSE is missing the required copyright notice")
-    skill = ROOT / "skills/mmss-principle-synthesis/SKILL.md"
-    if skill.is_file():
-        parse_frontmatter(skill, errors)
+    for skill in sorted(SKILLS_ROOT.glob("*/SKILL.md")):
+        expected_version = {
+            "mmss-principle-synthesis": "0.3.0",
+            "mmss-principle-synthesis-monolithic": "0.1.5",
+        }.get(skill.parent.name)
+        parse_frontmatter(skill, errors, expected_version)
     for fixture in (ROOT / "examples/existing-stack-audit/input.json",):
         if fixture.is_file():
             try:
@@ -127,7 +135,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print(f"Repository validation passed: {len(REQUIRED_FILES)} required files, skill version 0.1.5, JSON fixture, and local Markdown file links.")
+    print(f"Repository validation passed: {len(REQUIRED_FILES)} required files, {len(list(SKILLS_ROOT.glob('*/SKILL.md')))} skill packages, JSON fixture, and local Markdown file links.")
     return 0
 
 

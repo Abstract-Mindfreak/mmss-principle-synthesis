@@ -6,7 +6,7 @@ Create, audit, repair, extend, and transfer modular MMSS architectures from sour
 
 [English](README.md) · [Русский](README.ru.md)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.5](https://img.shields.io/badge/skill-0.1.5-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill versions: 0.3.0 and 0.1.5](https://img.shields.io/badge/skills-0.3.0%20%7C%200.1.5-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
 
 ## Overview
 
@@ -19,9 +19,37 @@ MMSS Principle Synthesis is an Agent Skill: an instruction file that helps an AI
 - Keep evidence, inferences, requirements, assumptions, and checks distinguishable.
 - Return structured JSON by default, while following an explicit output contract.
 
+## Skill editions
+
+This repository provides two separately installable editions:
+
+- **Composite v0.3.0** (`mmss-principle-synthesis`): core instructions plus reference material in `ALL_REFERENCES.md`, indexed by `DISPATCH.md`. The files form one package and should stay together. The guide describes how an agent can find and read a section; the package does not include executable loader code.
+- **Monolithic v0.1.5** (`mmss-principle-synthesis-monolithic`): the earlier single-file edition, kept available as a separate skill. Its skill name is unique so both editions can be discovered side by side.
+
+The two editions are maintained as distinct versions. The monolithic copy preserves the v0.1.5 text, with its frontmatter name changed to avoid a duplicate skill identity. No behavioral equivalence claim is made.
+
+## Related skills
+
+Ten related skills are available as independent sibling packages under [`skills/`](skills/):
+
+| Skill | Role |
+| --- | --- |
+| [`adaptive-commercial-specializer`](skills/adaptive-commercial-specializer/SKILL.md) | Builds commercial specializations from source material. |
+| [`adaptive-open-skill-synthesizer`](skills/adaptive-open-skill-synthesizer/SKILL.md) | Creates or reshapes skills around open variables. |
+| [`adaptive-sp-combinator`](skills/adaptive-sp-combinator/SKILL.md) | Explores and combines skills, systems, and properties. |
+| [`data-to-skill`](skills/data-to-skill/SKILL.md) | Turns supplied data into a skill. |
+| [`data-to-skill-transformer`](skills/data-to-skill-transformer/SKILL.md) | Transforms data into a skill specification. |
+| [`mmss-schema-guided-agent-bridge`](skills/mmss-schema-guided-agent-bridge/SKILL.md) | Connects schemas, routing, and agent architectures. |
+| [`session-process-logger`](skills/session-process-logger/SKILL.md) | Records a process from a session. |
+| [`session-to-skill`](skills/session-to-skill/SKILL.md) | Derives a skill from session material. |
+| [`skill-boundary-combinator`](skills/skill-boundary-combinator/SKILL.md) | Combines skills while tracking boundaries. |
+| [`skill-quick-sampler`](skills/skill-quick-sampler/SKILL.md) | Samples and inventories skill catalogues. |
+
+These are standalone skill packages. Their descriptions of relationships and contracts are maintained in each skill; their listing here does not assert that they all share identical contracts.
+
 ## Quick start
 
-Install the skill with the [Skills CLI](https://github.com/vercel-labs/skills):
+Install the composite edition with the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```sh
 npx skills add Abstract-Mindfreak/mmss-principle-synthesis --skill mmss-principle-synthesis
@@ -45,21 +73,23 @@ The skill inspects the supplied foundation, identifies the requested operation a
 
 ## Output and language behavior
 
-Structured JSON is the default unless the user requests another format. Stable machine-readable identifiers are preserved while human-readable content follows the user's language instructions. The skill's own language policy remains defined in `SKILL.md`.
+Structured JSON is the default unless the user requests another format. Stable machine-readable identifiers are preserved while human-readable content follows the user's language instructions. The skill's own language policy remains defined in its `SKILL.md`.
 
 ## Compatibility
 
-The file uses the Agent Skills `SKILL.md` convention with YAML frontmatter. The Skills CLI supports repository discovery and selection using the command above. This repository has not verified installation on individual agent platforms; host-specific behavior can differ.
+Each package uses the Agent Skills `SKILL.md` convention with YAML frontmatter. The Skills CLI supports repository discovery and skill selection. This repository has not verified installation on individual agent platforms; host-specific behavior can differ.
 
 ## Validation and limitations
 
-The local validator checks repository packaging, frontmatter fields, version, JSON fixtures, and local file links. GitHub Actions runs the same validator and `git diff --check`; these checks do not assess model outputs or architectural quality. See [evaluation notes](docs/evaluation.md) for the limits of one accompanied experiment.
+The local validator checks repository packaging, skill frontmatter, JSON fixtures, and local file links. GitHub Actions runs the same validator and `git diff --check`; these checks do not assess model outputs or architectural quality. See [evaluation notes](docs/evaluation.md) for the limits of one accompanied experiment.
 
 ## Repository structure
 
 | Path | Purpose |
 | --- | --- |
-| `skills/mmss-principle-synthesis/SKILL.md` | The skill instructions |
+| `skills/mmss-principle-synthesis/` | Composite v0.3.0 package: `SKILL.md`, `ALL_REFERENCES.md`, and `DISPATCH.md` |
+| `skills/mmss-principle-synthesis-monolithic/SKILL.md` | Monolithic v0.1.5 edition |
+| `skills/<related-skill>/SKILL.md` | Ten standalone related skill packages |
 | `examples/` | Synthetic prompts and expected properties |
 | `docs/` | Design principles and evaluation scope |
 | `scripts/validate_repository.py` | Local packaging validator |

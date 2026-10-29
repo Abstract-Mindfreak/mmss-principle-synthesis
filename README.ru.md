@@ -6,7 +6,7 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Skill version: 0.1.5](https://img.shields.io/badge/skill-0.1.5-blue.svg) ![Status: experimental](https://img.shields.io/badge/status-experimental-orange.svg) [![Repository validation](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
+![Лицензия: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Версии скилла: 0.3.0 и 0.1.5](https://img.shields.io/badge/skills-0.3.0%20%7C%200.1.5-blue.svg) ![Статус: экспериментальный](https://img.shields.io/badge/status-experimental-orange.svg) [![Проверка репозитория](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
 
 ## Обзор
 
@@ -19,9 +19,37 @@ MMSS Principle Synthesis — это Agent Skill: файл инструкций �
 - Разграничение свидетельств, выводов, требований, предположений и проверок.
 - Структурированный JSON по умолчанию с соблюдением явного формата ответа.
 
+## Редакции скилла
+
+В репозитории доступны две отдельно устанавливаемые редакции:
+
+- **Составная v0.3.0** (`mmss-principle-synthesis`): основные инструкции и справочный материал в `ALL_REFERENCES.md`, индексированный через `DISPATCH.md`. Эти файлы образуют один пакет и должны оставаться вместе. Руководство помогает агенту найти и прочитать нужный раздел; исполняемого загрузчика в пакете нет.
+- **Монолитная v0.1.5** (`mmss-principle-synthesis-monolithic`): предыдущая однофайловая редакция, сохранённая как отдельный скилл. Уникальное имя позволяет обнаруживать обе редакции рядом.
+
+Редакции поддерживаются как отдельные версии. Текст монолитной копии соответствует v0.1.5; изменено только имя в frontmatter, чтобы избежать дублирования идентификатора скилла. Эквивалентность их поведения не заявляется.
+
+## Связанные скиллы
+
+Десять связанных скиллов доступны как самостоятельные соседние пакеты в каталоге [`skills/`](skills/):
+
+| Скилл | Назначение |
+| --- | --- |
+| [`adaptive-commercial-specializer`](skills/adaptive-commercial-specializer/SKILL.md) | Создаёт коммерческие специализации на основе исходных материалов. |
+| [`adaptive-open-skill-synthesizer`](skills/adaptive-open-skill-synthesizer/SKILL.md) | Создаёт и перестраивает скиллы с открытыми переменными. |
+| [`adaptive-sp-combinator`](skills/adaptive-sp-combinator/SKILL.md) | Исследует и комбинирует скиллы, системы и свойства. |
+| [`data-to-skill`](skills/data-to-skill/SKILL.md) | Преобразует предоставленные данные в скилл. |
+| [`data-to-skill-transformer`](skills/data-to-skill-transformer/SKILL.md) | Преобразует данные в спецификацию скилла. |
+| [`mmss-schema-guided-agent-bridge`](skills/mmss-schema-guided-agent-bridge/SKILL.md) | Связывает схемы, маршрутизацию и архитектуры агентов. |
+| [`session-process-logger`](skills/session-process-logger/SKILL.md) | Фиксирует процесс по материалам сессии. |
+| [`session-to-skill`](skills/session-to-skill/SKILL.md) | Создаёт скилл на основе материалов сессии. |
+| [`skill-boundary-combinator`](skills/skill-boundary-combinator/SKILL.md) | Комбинирует скиллы с учётом их границ. |
+| [`skill-quick-sampler`](skills/skill-quick-sampler/SKILL.md) | Быстро изучает и описывает каталоги скиллов. |
+
+Это самостоятельные пакеты. Их описания связей и контрактов приведены в самих скиллах; их перечисление здесь не означает, что у всех одинаковые контракты.
+
 ## Быстрый старт
 
-Установите скилл с помощью [Skills CLI](https://github.com/vercel-labs/skills):
+Установите составную редакцию с помощью [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```sh
 npx skills add Abstract-Mindfreak/mmss-principle-synthesis --skill mmss-principle-synthesis
@@ -45,21 +73,23 @@ npx skills add . --list
 
 ## Формат ответа и язык
 
-По умолчанию используется структурированный JSON, если пользователь не запросил другой формат. Стабильные машинные идентификаторы сохраняются, а человекочитаемый текст следует инструкциям пользователя о языке. Политика языка самого скилла определена в `SKILL.md`.
+По умолчанию используется структурированный JSON, если пользователь не запросил другой формат. Стабильные машинные идентификаторы сохраняются, а человекочитаемый текст следует инструкциям пользователя о языке. Языковая политика каждого скилла определена в его `SKILL.md`.
 
 ## Совместимость
 
-Файл использует соглашение Agent Skills `SKILL.md` с YAML frontmatter. Skills CLI поддерживает поиск скиллов в репозитории и выбор по приведённой выше команде. Совместимость с конкретными платформами установки этого репозитория не проверялась; поведение может зависеть от платформы.
+Каждый пакет использует соглашение Agent Skills `SKILL.md` с YAML frontmatter. Skills CLI поддерживает поиск скиллов в репозитории и выбор по имени. Установка на отдельных платформах в этом репозитории не проверялась; поведение может различаться.
 
 ## Проверки и ограничения
 
-Локальный валидатор проверяет упаковку репозитория, поля frontmatter, версию, JSON-примеры и локальные ссылки на файлы. GitHub Actions запускает тот же валидатор и `git diff --check`; эти проверки не оценивают ответы модели или качество архитектуры. Ограничения одного сопровождаемого эксперимента описаны в [заметках об оценке](docs/evaluation.md).
+Локальный валидатор проверяет упаковку репозитория, frontmatter скиллов, JSON-примеры и локальные ссылки на файлы. GitHub Actions запускает тот же валидатор и `git diff --check`; эти проверки не оценивают ответы модели или качество архитектуры. Ограничения одного сопровождаемого эксперимента описаны в [заметках об оценке](docs/evaluation.md).
 
 ## Структура репозитория
 
 | Путь | Назначение |
 | --- | --- |
-| `skills/mmss-principle-synthesis/SKILL.md` | Инструкции скилла |
+| `skills/mmss-principle-synthesis/` | Составной пакет v0.3.0: `SKILL.md`, `ALL_REFERENCES.md` и `DISPATCH.md` |
+| `skills/mmss-principle-synthesis-monolithic/SKILL.md` | Монолитная редакция v0.1.5 |
+| `skills/<related-skill>/SKILL.md` | Десять самостоятельных связанных скиллов |
 | `examples/` | Синтетические запросы и ожидаемые свойства |
 | `docs/` | Принципы проектирования и границы оценки |
 | `scripts/validate_repository.py` | Локальный валидатор упаковки |
