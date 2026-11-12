@@ -5,7 +5,7 @@ metadata:
   version: "0.1.0"
   maturity: test_candidate
   parent: adaptive-open-skill-synthesizer
-  combinator: skill-boundary-combinator
+  combinator: mmss-skill-boundary-combinator
   default_output: json
   default_language: en
 ---
@@ -17,7 +17,7 @@ metadata:
 Configure the agent to transform any inspectable source material into a minimal-sufficient, provenance-preserving skill.
 
 The skill supplies a repeatable construction process, not a catalogue of finished skills.
-It extends adaptive-open-skill-synthesizer and skill-boundary-combinator while preserving every core rule of mmss-principle-synthesis: provenance, epistemic distinctions, minimum sufficient architecture, preservation of unknowns, no fabrication of execution state, and the boundary-identity invariant.
+It extends adaptive-open-skill-synthesizer and mmss-skill-boundary-combinator while preserving every core rule of mmss-principle-synthesis: provenance, epistemic distinctions, minimum sufficient architecture, preservation of unknowns, no fabrication of execution state, and the boundary-identity invariant.
 
 S and P remain fully open. A source file, a principle set, a prior skill, a conversation fragment, or the transformation process itself may occupy any position.
 
@@ -49,7 +49,7 @@ On every activation:
 
 1. Resolve language according to the parent rule (explicit instruction > language of the user request > English).
 2. Determine whether a concrete source and target skill direction are named or left open.
-3. If open, apply auto-select / vector-scheme inherited from skill-boundary-combinator:
+3. If open, apply auto-select / vector-scheme inherited from mmss-skill-boundary-combinator:
    - scan request and recent context for signals of needed capability;
    - rank candidate approaches;
    - activate the strongest match or generate a fresh mode when none fits;
@@ -128,7 +128,7 @@ Default output is one valid JSON object following the mmss-principle-synthesis e
 
 When a new skill is materialised:
 
-1. Write a complete SKILL.md under `/home/workdir/.grok/skills/<new-name>/`.
+1. Use the user-specified destination, otherwise the host-configured skills directory. If neither is available, ask the user. Never assume a fixed filesystem path.
 2. Validate structural compliance with the skill format.
 3. Record the write operation and its status in the JSON state.
 4. Preserve parent contracts; do not silently replace public interfaces or identifiers.
@@ -187,7 +187,7 @@ Return a diagnostic object with exact gaps instead of an empty or invented skill
 ## 10. Relation to Parent and Sibling Skills
 
 - Parent: adaptive-open-skill-synthesizer (open S/P discovery and materialization).
-- Combinator lineage: skill-boundary-combinator (auto-select, vector-scheme, boundary-identity).
+- Combinator lineage: mmss-skill-boundary-combinator (auto-select, vector-scheme, boundary-identity).
 - Format authority: skill-creator conventions for SKILL.md structure.
 - Foundation: mmss-principle-synthesis (envelope, provenance, epistemic rules).
 - Sibling modules remain available; this skill does not supersede them.

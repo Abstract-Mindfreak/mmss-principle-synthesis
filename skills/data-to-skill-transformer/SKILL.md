@@ -5,7 +5,7 @@ metadata:
   version: "0.2.0"
   maturity: test_candidate
   parent: adaptive-open-skill-synthesizer
-  combinator: skill-boundary-combinator
+  combinator: mmss-skill-boundary-combinator
   default_output: skill_md
   default_language: en
   invariant: P_UNIVERSAL_CONSTRUCTIVE_METHOD
@@ -115,16 +115,16 @@ On every activation:
 
 1. Resolve language (explicit instruction > language of the user request > English).
 2. Determine whether a concrete source and target direction are named or left open.
-3. If open, apply auto-select / vector-scheme from skill-boundary-combinator.
+3. If open, apply auto-select / vector-scheme from mmss-skill-boundary-combinator.
 4. If several approaches are close, emit one focused clarification and set task_outcome to blocked.
 5. Never freeze a closed catalogue of source kinds, principle kinds or skill templates.
 
 ## 7. Output Contract
 
-Default output is a complete, valid SKILL.md written to `/home/workdir/.grok/skills/<name>/`, or an explicit impossibility / partial report in the mmss-principle-synthesis JSON envelope.
+Default output is a complete, valid SKILL.md artifact, or an explicit impossibility / partial report in the mmss-principle-synthesis JSON envelope. When writing the artifact, use the user-specified destination, otherwise the host-configured skills directory; if neither is available, ask the user. Never assume a fixed filesystem path.
 
 When a new skill is materialised:
-- Create the directory under `/home/workdir/.grok/skills/<name>/`
+- Create the directory under the selected destination; never assume a fixed filesystem path.
 - Write a complete SKILL.md
 - Validate structural compliance with skill-creator rules
 - Preserve parent contracts; do not silently replace public interfaces or identifiers
@@ -149,10 +149,9 @@ Minimum sufficient checks only:
 ## 9. Relation to Parent and Sibling Skills
 
 - Parent: adaptive-open-skill-synthesizer (open S/P discovery and materialization)
-- Combinator lineage: skill-boundary-combinator (auto-select, vector-scheme, boundary-identity)
+- Combinator lineage: mmss-skill-boundary-combinator (auto-select, vector-scheme, boundary-identity)
 - Foundation: mmss-principle-synthesis (envelope, provenance, epistemic rules)
 - Format authority: skill-creator conventions for SKILL.md structure
-- Sibling: data-to-skill (earlier session variant) — this version unifies and supersedes it as the single maintained implementation
 - This skill may itself later become an S transformed by a newly discovered P.
 
 ## 10. Completion Standard

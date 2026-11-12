@@ -4,7 +4,7 @@ description: "Adaptive discovery and materialization of new skills under open S 
 metadata:
   version: "0.2.0"
   maturity: test_candidate
-  parent: adaptive-sp-combinator
+  parent: mmss-adaptive-sp-combinator
   default_output: json
   default_language: en
 ---
@@ -20,7 +20,7 @@ open variables.
 The skill supplies the working process for inventing or reshaping skills from
 productive findings rather than from closed lists of templates.
 
-It extends adaptive-sp-combinator and preserves all parent contracts of
+It extends mmss-adaptive-sp-combinator and preserves all parent contracts of
 mmss-principle-synthesis: provenance, epistemic distinctions, minimum
 sufficient architecture, preservation of unknowns, no fabrication of execution
 state, boundary-identity invariant.
@@ -122,7 +122,7 @@ assumptions, absence of fabricated execution claims.
 
 ## 9. Relation to Parent and Sibling Skills
 
-- Parent: adaptive-sp-combinator (open S/P discovery and combination).
+- Parent: mmss-adaptive-sp-combinator (open S/P discovery and combination).
 - Grandparent contract: mmss-principle-synthesis (envelope, epistemics).
 - Format authority: skill-creator, where present in the environment.
 - Sibling modules remain available; this skill does not supersede them.

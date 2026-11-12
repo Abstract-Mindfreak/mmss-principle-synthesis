@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="MMSS Skill Router" aria-labelledby="title desc">
+  <title id="title">MMSS Skill Router</title>
+  <desc id="desc">Fractal routing: user goal (violet dot at top) enters the router (central family diamond), which selects one of three narrowest-sufficient routes to a corresponding artifact (amber terminal at bottom). Each route illuminates in turn over 9s; the chosen route glows cyan while other routes stay dim. Represents fractal-SP-tree branch selection.</desc>
+
+  <!-- Family invariant: background -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+
+  <!-- Family invariant: dashed boundary (44s) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+
+  <!-- Family invariant: halo (3s) -->
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 3 route baselines (dim) -->
+  <line x1="25" y1="36" x2="14" y2="48" stroke="#374151" stroke-width="0.4"/>
+  <line x1="32" y1="39" x2="32" y2="48" stroke="#374151" stroke-width="0.4"/>
+  <line x1="39" y1="36" x2="50" y2="48" stroke="#374151" stroke-width="0.4"/>
+
+  <!-- Route glow overlays (one active per phase) -->
+  <line x1="25" y1="36" x2="14" y2="48" stroke="#22D3EE" stroke-width="0.9" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.9;0;0" keyTimes="0;0.03;0.30;0.33;1" dur="9s" repeatCount="indefinite"/>
+  </line>
+  <line x1="32" y1="39" x2="32" y2="48" stroke="#22D3EE" stroke-width="0.9" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.9;0;0" keyTimes="0;0.36;0.63;0.66;1" dur="9s" repeatCount="indefinite"/>
+  </line>
+  <line x1="39" y1="36" x2="50" y2="48" stroke="#22D3EE" stroke-width="0.9" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.9;0;0" keyTimes="0;0.69;0.96;0.99;1" dur="9s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Root: user goal (violet, pulses once per route decision) -->
+  <circle cx="32" cy="8" r="1.8" fill="#A78BFA">
+    <animate attributeName="r" values="1.8;2.2;1.8;1.8;2.2;1.8;1.8;2.2;1.8" keyTimes="0;0.03;0.06;0.33;0.36;0.39;0.66;0.69;0.72" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Root → diamond line -->
+  <line x1="32" y1="10" x2="32" y2="25" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#E0E7FF;#E0E7FF;#4B5563" keyTimes="0;0.02;0.05;0.08" dur="9s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Terminal 1: left (amber diamond, dim until route chosen) -->
+  <g transform="rotate(45 14 50)">
+    <rect x="12" y="48" width="4" height="4" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.6">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A;#1F1E4A" keyTimes="0;0.06;0.10;0.30;0.34;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F;#4C488F" keyTimes="0;0.06;0.10;0.30;0.34;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Terminal 2: center -->
+  <g transform="rotate(45 32 50)">
+    <rect x="30" y="48" width="4" height="4" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.6">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A;#1F1E4A" keyTimes="0;0.39;0.42;0.63;0.67;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F;#4C488F" keyTimes="0;0.39;0.42;0.63;0.67;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Terminal 3: right -->
+  <g transform="rotate(45 50 50)">
+    <rect x="48" y="48" width="4" height="4" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.6">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A;#1F1E4A" keyTimes="0;0.72;0.75;0.96;1;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F;#4C488F" keyTimes="0;0.72;0.75;0.96;1;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Central diamond (family invariant + router core; pulses 3× per cycle) -->
+  <g transform="rotate(45 32 32)">
+    <rect x="28.5" y="28.5" width="7" height="7" fill="#312E81" stroke="#818CF8" stroke-width="0.9">
+      <animate attributeName="fill" values="#312E81;#4338CA;#312E81;#312E81;#4338CA;#312E81;#312E81;#4338CA;#312E81" keyTimes="0;0.05;0.10;0.33;0.38;0.43;0.66;0.71;0.76" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#818CF8;#C7D2FE;#818CF8;#818CF8;#C7D2FE;#818CF8;#818CF8;#C7D2FE;#818CF8" keyTimes="0;0.05;0.10;0.33;0.38;0.43;0.66;0.71;0.76" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Traveling pulses (one per route, invisible unless active) -->
+  <circle r="1" fill="#E0E7FF" opacity="0">
+    <animate attributeName="cx" values="25;25;14;14;25" keyTimes="0;0.04;0.28;0.99;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="36;36;48;48;36" keyTimes="0;0.04;0.28;0.99;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.28;0.31;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1" fill="#E0E7FF" opacity="0">
+    <animate attributeName="cy" values="39;39;48;48;39" keyTimes="0;0.37;0.61;0.99;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.37;0.61;0.64;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1" fill="#E0E7FF" opacity="0">
+    <animate attributeName="cx" values="39;39;50;50;39" keyTimes="0;0.70;0.94;0.99;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="36;36;48;48;36" keyTimes="0;0.70;0.94;0.99;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.70;0.94;0.97;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</svg>

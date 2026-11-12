@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="Reopen the Problem">
+  <title>MMSS · Reopen the Problem</title>
+  <desc>Bracket and Return archetype. Baseline diamond on the right = existing solution, present from start. Suspension loop (dashed violet arc) departs from baseline, arcs left over top, returns to baseline — showing temporary bracketing, not deletion. Three cyan alternatives explored on the loop. Family diamond at center = invariant that persists unaffected by suspension. At closure, baseline pulses violet (retained with new grounds); amber output marks the decision materialized. Cycle 16s.</desc>
+
+  <!-- Family invariant: background -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+
+  <!-- Family invariant: dashed boundary (44s) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+
+  <!-- Family invariant: halo (3s) -->
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Suspension loop: leaves baseline at top, arcs left over the top, returns at bottom -->
+  <path d="M 46 30 Q 40 12 26 10 Q 10 14 8 30 Q 10 46 24 52 Q 40 54 46 38"
+    stroke="#A78BFA" stroke-width="0.5" fill="none" stroke-dasharray="1 1.5" opacity="0.65"/>
+
+  <!-- 3 alternatives explored along the suspension loop -->
+  <circle cx="22" cy="14" r="1.2" fill="#22D3EE" opacity="0.7">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="10" cy="30" r="1.2" fill="#22D3EE" opacity="0.7">
+    <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="22" cy="50" r="1.2" fill="#22D3EE" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.85;0.7" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Family diamond at center: invariant, unaffected by suspension -->
+  <g transform="rotate(45 32 32)">
+    <rect x="28.5" y="28.5" width="7" height="7" fill="#312E81" stroke="#818CF8" stroke-width="0.85">
+      <animate attributeName="fill" values="#312E81;#4338CA;#312E81" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#818CF8;#C7D2FE;#818CF8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Baseline diamond (existing solution) at right, present from start -->
+  <g transform="rotate(45 48 34)">
+    <rect x="45.5" y="31.5" width="5" height="5" fill="#312E81" stroke="#818CF8" stroke-width="0.75">
+      <animate attributeName="fill" values="#312E81;#312E81;#4338CA;#4338CA;#312E81" keyTimes="0;0.5;0.56;0.7;0.76" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#818CF8;#818CF8;#C7D2FE;#C7D2FE;#818CF8" keyTimes="0;0.5;0.56;0.7;0.76" dur="16s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Baseline retained pulse: "retained with new grounds" — most common outcome -->
+  <circle cx="48" cy="34" r="3.5" stroke="#A78BFA" stroke-width="0.5" fill="none" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.56;0.62;0.72;0.78;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3.5;3.5;5.5;5.5;3.5;3.5" keyTimes="0;0.56;0.62;0.72;0.78;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Amber output: decision materialized (baseline-with-grounds or new alternative) -->
+  <g transform="rotate(45 32 56)">
+    <rect x="29.5" y="53.5" width="5" height="5" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.7">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A" keyTimes="0;0.76;0.82;0.92;0.98" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F" keyTimes="0;0.76;0.82;0.92;0.98" dur="16s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

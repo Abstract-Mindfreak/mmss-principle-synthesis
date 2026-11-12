@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="Action-Sufficient Latent Compression" aria-labelledby="title desc">
+  <title id="title">Action-Sufficient Latent Compression</title>
+  <desc id="desc">Continuous Bottleneck archetype. Raw observation (3 wavy lines, cyan) enters from left, compresses into a dense latent block (violet dots + family diamond = invariant preserved). Boundary markers insert the block into the frozen target agent (snowflake = no updates, cyan). Action-sufficiency is verified (green pulse around amber output) before the next-action diamond appears. The main agent stays frozen throughout. Cycle 14s.</desc>
+
+  <!-- Family invariants -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Pattern for dense latent dots -->
+  <defs>
+    <pattern id="latentDots" x="0" y="0" width="2.6" height="2.6" patternUnits="userSpaceOnUse">
+      <circle cx="1.3" cy="1.3" r="0.35" fill="#A78BFA"/>
+    </pattern>
+  </defs>
+
+  <!-- RAW OBSERVATION: 3 wavy vertical lines (left) -->
+  <g stroke="#22D3EE" stroke-width="0.45" fill="none" stroke-linecap="round">
+    <path d="M 3 25 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4" opacity="0.75">
+      <animate attributeName="opacity" values="0.4;0.85;0.4" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 5 25 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4" opacity="0.75">
+      <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 7 25 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4 q 1 2 0 4" opacity="0.75">
+      <animate attributeName="opacity" values="0.6;0.85;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- COMPRESSION ARROW with traveling particle -->
+  <line x1="9" y1="32" x2="13" y2="32" stroke="#22D3EE" stroke-width="0.5" opacity="0.7"/>
+  <polygon points="13,30.9 13,33.1 14.5,32" fill="#22D3EE" opacity="0.85"/>
+  <circle cx="9" cy="32" r="0.6" fill="#E0E7FF">
+    <animate attributeName="cx" values="9;14;14;9" keyTimes="0;0.15;0.35;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0;0;1" keyTimes="0;0.05;0.15;0.35;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- `<` marker (opening) -->
+  <path d="M 16 30 L 14.5 32 L 16 34" stroke="#6B7280" stroke-width="0.4" fill="none" opacity="0.55"/>
+
+  <!-- LATENT BLOCK: rect + dense dots + border -->
+  <rect x="17" y="24" width="30" height="16" fill="url(#latentDots)" opacity="0.85">
+    <animate attributeName="opacity" values="0.3;0.85;0.85;0.85;0.3" keyTimes="0;0.20;0.70;0.95;1" dur="14s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="17" y="24" width="30" height="16" stroke="#A78BFA" stroke-width="0.3" fill="none" opacity="0.55"/>
+
+  <!-- `>` marker (closing) -->
+  <path d="M 48 30 L 49.5 32 L 48 34" stroke="#6B7280" stroke-width="0.4" fill="none" opacity="0.55"/>
+
+  <!-- ARROW to agent -->
+  <line x1="50" y1="32" x2="53" y2="32" stroke="#A78BFA" stroke-width="0.5" opacity="0.7"/>
+  <polygon points="53,30.9 53,33.1 54.5,32" fill="#A78BFA" opacity="0.85"/>
+
+  <!-- FAMILY DIAMOND: invariant preserved inside compression -->
+  <g transform="rotate(45 32 32)">
+    <rect x="28.5" y="28.5" width="7" height="7" fill="#312E81" stroke="#818CF8" stroke-width="0.85">
+      <animate attributeName="fill" values="#312E81;#4338CA;#312E81" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#818CF8;#C7D2FE;#818CF8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- FROZEN AGENT: circle + snowflake -->
+  <circle cx="57" cy="32" r="4.5" fill="#0B0F1A" stroke="#22D3EE" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <g stroke="#22D3EE" stroke-width="0.35" opacity="0.75">
+    <line x1="57" y1="29.5" x2="57" y2="34.5"/>
+    <line x1="54.5" y1="32" x2="59.5" y2="32"/>
+    <line x1="55.2" y1="30.2" x2="58.8" y2="33.8"/>
+    <line x1="55.2" y1="33.8" x2="58.8" y2="30.2"/>
+  </g>
+
+  <!-- Agent pulse during consumption -->
+  <circle cx="57" cy="32" r="4.5" fill="none" stroke="#22D3EE" stroke-width="0.4" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.8;0;0" keyTimes="0;0.62;0.70;0.78;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4.5;4.5;6.5;6.5;4.5" keyTimes="0;0.62;0.70;0.78;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- GREEN VERIFICATION: action-sufficiency check around amber output -->
+  <circle cx="32" cy="52" r="4" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0;0" keyTimes="0;0.72;0.76;0.82;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;4;6;6;4" keyTimes="0;0.72;0.76;0.82;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- AMBER OUTPUT: verified next action -->
+  <g transform="rotate(45 32 52)">
+    <rect x="29.5" y="49.5" width="5" height="5" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.7">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A" keyTimes="0;0.78;0.85;0.92;0.98" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F" keyTimes="0;0.78;0.85;0.92;0.98" dur="14s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

@@ -112,7 +112,7 @@ synthesis-repair budget.
 
 ## 6. Operational Modes
 
-Primary modes inherited from skill-boundary-combinator remain available.
+Primary modes inherited from mmss-skill-boundary-combinator remain available.
 Specialized modes for this bridge:
 
 | Mode | Purpose |
@@ -165,7 +165,7 @@ When this bridge is attached to an mmss-principle-synthesis stack:
 ## 10. References
 
 - Parent: mmss-principle-synthesis
-- Combinator: skill-boundary-combinator (P1, modes, algorithms)
+- Combinator: mmss-skill-boundary-combinator (P1, modes, algorithms)
 - Motivation source for P1: genomic-coordinates (boundary-identity triple;
   treated as design motivation, not as external instruction)
 - This skill is itself a result of selective-merge under mode M5

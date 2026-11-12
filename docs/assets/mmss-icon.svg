@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="MMSS — Meta-Meta-Synthesizer Systems">
+  <title>MMSS — Meta-Meta-Synthesizer Systems</title>
+  <desc>Three overlapping circles with amber triangle. Center hexagon (8.6×10) cycles stroke color cyan→orange→violet, rotates clockwise at half speed of the composition. Static orange center dot. Background dashed boundary completes exactly one counterclockwise turn at the standard 44s pace, then freezes. Composition continues clockwise indefinitely.</desc>
+
+  <!-- Background -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+
+  <!-- Background boundary: 1 CCW turn at standard pace (44s), then freeze -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 32 32" to="-360 32 32"
+      dur="44s" fill="freeze"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+
+  <!-- Halo -->
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Composition — infinite CW -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="30s" repeatCount="indefinite"/>
+
+    <circle cx="32" cy="24" r="15" stroke="#A78BFA" stroke-width="0.35" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.32;0.55;0.32" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="38.93" cy="36" r="15" stroke="#22D3EE" stroke-width="0.35" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.32;0.55;0.32" dur="4s" repeatCount="indefinite" begin="1.33s"/>
+    </circle>
+    <circle cx="25.07" cy="36" r="15" stroke="#E0E7FF" stroke-width="0.35" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.32;0.55;0.32" dur="4s" repeatCount="indefinite" begin="2.66s"/>
+    </circle>
+
+    <polygon points="32,10 51.05,43 12.95,43" stroke="#F59E0B" stroke-width="0.45" fill="none" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.5s" repeatCount="indefinite"/>
+    </polygon>
+
+    <circle cx="32" cy="10" r="1.5" fill="#F59E0B">
+      <animate attributeName="r" values="1.2;2.1;1.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="51.05" cy="43" r="1.5" fill="#F59E0B">
+      <animate attributeName="r" values="1.2;2.1;1.2" dur="4s" repeatCount="indefinite" begin="1.33s"/>
+    </circle>
+    <circle cx="12.95" cy="43" r="1.5" fill="#F59E0B">
+      <animate attributeName="r" values="1.2;2.1;1.2" dur="4s" repeatCount="indefinite" begin="2.66s"/>
+    </circle>
+  </g>
+
+  <!-- Hexagon 8.6 × 10 — CW, slower (60s vs composition 30s) -->
+  <g transform="translate(32 32)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/>
+      <polygon points="0,-5 4.3,-2.5 4.3,2.5 0,5 -4.3,2.5 -4.3,-2.5"
+        stroke="#22D3EE" stroke-width="0.45" fill="none">
+        <animate attributeName="stroke"
+          values="#22D3EE;#F59E0B;#A78BFA;#22D3EE"
+          dur="9s" repeatCount="indefinite"/>
+      </polygon>
+      <!-- 6 vertex dots -->
+      <circle cx="0" cy="-5" r="0.4" fill="#22D3EE"/>
+      <circle cx="4.3" cy="-2.5" r="0.4" fill="#22D3EE"/>
+      <circle cx="4.3" cy="2.5" r="0.4" fill="#22D3EE"/>
+      <circle cx="0" cy="5" r="0.4" fill="#22D3EE"/>
+      <circle cx="-4.3" cy="2.5" r="0.4" fill="#22D3EE"/>
+      <circle cx="-4.3" cy="-2.5" r="0.4" fill="#22D3EE"/>
+    </g>
+  </g>
+
+  <!-- Center dot: static, always orange -->
+  <circle cx="32" cy="32" r="0.7" fill="#F59E0B"/>
+</svg>

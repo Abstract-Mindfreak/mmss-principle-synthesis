@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MMSS monolithic" aria-labelledby="title desc">
+      <title id="title">MMSS Principle Synthesis (monolithic)</title>
+  <desc id="desc">Create, audit, validate, repair, extend, and transfer modular MMSS architectures from sources, user requirements, or existing stacks.</desc>
+      <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+      <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="1.15" opacity="0.6"/>
+      <g transform="rotate(23.44 32 32)">
+        <animateTransform attributeName="transform" type="rotate" from="23.44 32 32" to="383.44 32 32" dur="28s" repeatCount="indefinite"/>
+        <circle cx="32" cy="32" r="13.1" stroke="#F3F4F6" stroke-width="1.25"><animate attributeName="stroke" values="#F3F4F6;#E0E7FF;#E0E7FF;#F3F4F6" keyTimes="0;0.1;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="32" cy="20.4" r="13.1" stroke="#6B7280" stroke-width="0.95"><animate attributeName="stroke" values="#6B7280;#6B7280;#F59E0B;#F59E0B;#6B7280" keyTimes="0;0.0714;0.1714;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="32" cy="43.6" r="13.1" stroke="#D1D5DB" stroke-width="1.35"><animate attributeName="stroke" values="#D1D5DB;#D1D5DB;#38BDF8;#38BDF8;#D1D5DB" keyTimes="0;0.1429;0.2429;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="21.9" cy="26.2" r="13.1" stroke="#9CA3AF" stroke-width="0.95"><animate attributeName="stroke" values="#9CA3AF;#9CA3AF;#C084FC;#C084FC;#9CA3AF" keyTimes="0;0.2143;0.3143;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="42.1" cy="26.2" r="13.1" stroke="#4B5563" stroke-width="0.85"><animate attributeName="stroke" values="#4B5563;#4B5563;#818CF8;#818CF8;#4B5563" keyTimes="0;0.2857;0.3857;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="21.9" cy="37.8" r="13.1" stroke="#E5E7EB" stroke-width="1.5"><animate attributeName="stroke" values="#E5E7EB;#E5E7EB;#E879F9;#E879F9;#E5E7EB" keyTimes="0;0.3571;0.4571;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+        <circle cx="42.1" cy="37.8" r="13.1" stroke="#6B7280" stroke-width="1.05"><animate attributeName="stroke" values="#6B7280;#6B7280;#A5B4FC;#A5B4FC;#6B7280" keyTimes="0;0.4286;0.5286;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+      </g>
+      <circle cx="32" cy="32" r="6.55" fill="#F9FAFB"><animate attributeName="fill" values="#F9FAFB;#FFFFFF;#FFFFFF;#F9FAFB" keyTimes="0;0.1;0.9;1" dur="7s" repeatCount="indefinite"/></circle>
+    </svg>

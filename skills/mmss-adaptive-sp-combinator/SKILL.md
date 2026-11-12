@@ -1,11 +1,11 @@
 ---
-name: adaptive-sp-combinator
+name: mmss-adaptive-sp-combinator
 description: "Adaptive discovery, transformation, and combination of skills, systems, properties, and of the combination methods themselves, under open S and P variables. Use when the agent must find, reshape, or invent combinations without fixed entity lists, role catalogues, or algorithm menus; when auto-select should choose or generate the search approach; when new modes must be born from productive findings; or when mmss-principle-synthesis needs an open combinatory layer that preserves parent contracts. Triggers include: adaptive combination, open S P, discover approaches, generate new mode, transform combination method, auto-select search strategy, vector-scheme reactivation, exploratory skill synthesis."
 metadata:
   version: "0.2.0"
   maturity: test_candidate
   parent: mmss-principle-synthesis
-  combinator: skill-boundary-combinator
+  combinator: mmss-skill-boundary-combinator
   default_output: json
   default_language: en
 ---
@@ -73,7 +73,7 @@ On every activation:
 2. Determine whether the user has named a concrete direction or left the
    approach open.
 3. If open, apply the auto-select / vector-scheme mechanism inherited from
-   skill-boundary-combinator:
+   mmss-skill-boundary-combinator:
    - scan the current request and recent context for signals of intent;
    - rank candidate approaches (including previously productive
      vector-schemes);
@@ -99,7 +99,7 @@ not as an open-ended discourse.
 3. **Isolate P**: for each relevant S, state candidate properties — with
    provenance (observed / inferred / hypothesized) visible.
 4. **Declare combination**: state the interaction mode and (when used)
-   algorithm, deferring to skill-boundary-combinator's catalogue where
+   algorithm, deferring to mmss-skill-boundary-combinator's catalogue where
    applicable.
 5. **Execute**: perform the combination and record what emerged.
 6. **Checkpoint**: state concretely (a) what was produced, (b) which parts
@@ -174,12 +174,12 @@ research process into an endless audit.
 
 ## 9. Relation to Sibling Skills
 
-- skill-boundary-combinator supplies the auto-select, vector-scheme, and
+- mmss-skill-boundary-combinator supplies the auto-select, vector-scheme, and
   mode-generation machinery used here.
 - skill-quick-sampler may be invoked when a lightweight inventory of an
   external catalogue is useful.
 - mmss-schema-guided-agent-bridge and other sibling modules remain available;
   this skill does not supersede them.
 
-The adaptive-sp-combinator itself may later become an S that is transformed by
+The mmss-adaptive-sp-combinator itself may later become an S that is transformed by
 a newly discovered P.

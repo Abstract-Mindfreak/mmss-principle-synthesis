@@ -1,5 +1,5 @@
 ---
-name: skill-boundary-combinator
+name: mmss-skill-boundary-combinator
 description: "Fork of mmss-principle-synthesis that adds explicit operational modes for algorithmic skill combination under the boundary-identity invariant. Use when the user asks to create, fork, or activate skill combinations, build P-chains, extract abstract invariants, selectively compose properties of skills, adjust influence between properties, or run automatic mode selection on trigger. Triggers include skill combination, P-chain, boundary invariant, auto-activate mode, selective combinatorics, fork mmss, generate new skill from invariants."
 metadata:
   version: "0.2.0"

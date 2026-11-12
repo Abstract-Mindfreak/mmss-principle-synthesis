@@ -72,7 +72,7 @@ Execute in order. Do not invent missing history.
 - Stop when further addition no longer reduces uncertainty about how to repeat the process.
 
 ### Step 6 — Emit the skill
-- Write a complete SKILL.md under `/home/workdir/.grok/skills/<new-name>/`.
+- Write the complete SKILL.md to the user-specified destination, otherwise the host-configured skills directory. If neither is available, ask the user. Never assume a fixed filesystem path.
 - The skill must be self-contained.
 - Human-readable fields follow language resolution rules; machine identifiers stay stable.
 - Record the layered projection (session-log → patterns → skill-contract → materialised skill) and what was discarded at each boundary.
@@ -93,7 +93,7 @@ Silent loss of value, convention or context is a contract violation.
 Default output is a complete SKILL.md (or an explicit partial/blocked report in mmss envelope).
 
 When materialising:
-- Create `/home/workdir/.grok/skills/<name>/`
+- Create the directory under the selected destination; never assume a fixed filesystem path.
 - Write the full SKILL.md
 - Validate against skill-creator structural expectations
 - Preserve all parent contracts

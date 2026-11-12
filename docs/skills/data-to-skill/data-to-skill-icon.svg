@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="Data-to-Skill (open procedure)">
+  <title>Data-to-Skill (open procedure, v0.1.0)</title>
+  <desc>Funnel with Return Loop. 4-tier lossy projection (L0→L1→L2→L3) filters 6 material particles → 4 → 2 → 1. Robust kernel (amber) survives all boundaries and emits as SKILL.md. Dashed violet feedback arc from output returns to source — STEP_7: the new skill may become S for a subsequent cycle. Explicitly open procedure, not a fixed pipeline. Cycle 14s.</desc>
+
+  <!-- Family invariant: background -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+
+  <!-- Family invariant: dashed boundary (44s) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+
+  <!-- Family invariant: halo (3s) -->
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 4-tier narrowing funnel -->
+  <line x1="8" y1="10" x2="56" y2="10" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.02;0.05;0.10;0.15" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="14" y1="19" x2="50" y2="19" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.14;0.17;0.22;0.27" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="20" y1="28" x2="44" y2="28" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.26;0.29;0.34;0.39" dur="14s" repeatCount="indefinite"/>
+  </line>
+  <line x1="26" y1="37" x2="38" y2="37" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.38;0.41;0.46;0.51" dur="14s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Filtered particles (6→4→2→1) -->
+  <circle r="1.3" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="10;10;14;14;10" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;17;17;10" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.3" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="54;54;50;50;54" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;17;17;10" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.03;0.17;0.22;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.3" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="20;20;20;24;24;20" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;19;28;28;10" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.3" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="44;44;42;40;40;44" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;19;28;28;10" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.03;0.17;0.32;0.37;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.3" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="28;28;28;28;30;30;28" keyTimes="0;0.03;0.17;0.32;0.47;0.52;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;19;28;37;37;10" keyTimes="0;0.03;0.17;0.32;0.47;0.52;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;1;0;0" keyTimes="0;0.03;0.17;0.32;0.47;0.52;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Robust kernel survivor (amber) -->
+  <circle r="1.7" fill="#A78BFA" opacity="0">
+    <animate attributeName="cx" values="36;36;36;35;34;32;32;36;36" keyTimes="0;0.03;0.06;0.17;0.32;0.47;0.52;0.98;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="10;10;10;19;28;37;46;46;10" keyTimes="0;0.03;0.06;0.17;0.32;0.47;0.52;0.98;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.06;0.92;0.97;0.99;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#A78BFA;#A78BFA;#F59E0B;#FBBF24;#F59E0B;#A78BFA" keyTimes="0;0.50;0.55;0.85;0.93;0.98" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="1.7;1.7;2.6;3.3;2.9;1.7" keyTimes="0;0.52;0.57;0.75;0.85;0.93" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P1 triple around kernel -->
+  <circle cx="29" cy="43" r="0.85" fill="#A78BFA" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.85;0.88;0.94;0.97" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="35" cy="43" r="0.85" fill="#22D3EE" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.85;0.88;0.94;0.97" dur="14s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="48" r="0.85" fill="#818CF8" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.85;0.88;0.94;0.97" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Amber output: materialized SKILL.md -->
+  <g transform="rotate(45 32 53)">
+    <rect x="29.5" y="50.5" width="5" height="5" fill="#312E81" stroke="#818CF8" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.88;0.92;0.96;0.98;1" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#312E81;#4338CA;#312E81" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- === FEEDBACK RETURN ARC (STEP_7: new skill becomes S) === -->
+  <!-- Dashed violet arc from bottom-back to top-left -->
+  <path d="M 29 53 Q 8 52 6 32 Q 6 12 24 10"
+    stroke="#A78BFA" stroke-width="0.5" fill="none" stroke-dasharray="1 1.5" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.7;0.7;0" keyTimes="0;0.84;0.88;0.92;0.98;1" dur="14s" repeatCount="indefinite"/>
+  </path>
+  <!-- Arrow at the return endpoint (top-left) -->
+  <polygon points="23,8.5 25,9.5 23,11" fill="#A78BFA" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.7;0.7;0" keyTimes="0;0.84;0.88;0.92;0.98;1" dur="14s" repeatCount="indefinite"/>
+  </polygon>
+
+  <!-- S marker at return point (new skill re-enters as S) -->
+  <circle cx="24" cy="10" r="1.2" fill="#A78BFA" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.9;0.9;0" keyTimes="0;0.90;0.94;0.96;0.98;1" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="1.2;1.2;1.6;1.2;1.2" keyTimes="0;0.94;0.96;0.98;1" dur="14s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Adaptive SP Combinator" aria-labelledby="title desc">
+      <title id="title">Adaptive SP Combinator</title>
+  <desc id="desc">Adaptive discovery, transformation, and combination of skills, systems, properties, and of the combination methods themselves, under open S and P variables.</desc>
+      <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/><circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/></g>
+      <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="32" cy="32" r="22" stroke="#374151" stroke-width="0.35" stroke-dasharray="1 2" opacity="0.4" fill="none"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="16s" repeatCount="indefinite"/>
+        <path d="M 54 32 A 22 22 0 0 1 47.56 47.56" stroke="#A78BFA" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+        <circle cx="47.56" cy="47.56" r="2.2" fill="#A78BFA"/></g>
+      <g><animateTransform attributeName="transform" type="rotate" from="360 32 32" to="0 32 32" dur="16s" repeatCount="indefinite"/>
+        <path d="M 16.44 16.44 A 22 22 0 0 1 32 10" stroke="#22D3EE" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.75"/>
+        <circle cx="16.44" cy="16.44" r="2.2" fill="#22D3EE"/></g>
+      <circle cx="16.44" cy="47.56" r="1" fill="#FFFFFF" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0;0.23;0.25;0.28;0.32;0.99;1" dur="16s" repeatCount="indefinite"/><animate attributeName="r" values="1;1;1.5;4.5;5;1;1" keyTimes="0;0.23;0.25;0.26;0.3;0.99;1" dur="16s" repeatCount="indefinite"/></circle>
+      <circle cx="47.56" cy="16.44" r="1" fill="#FFFFFF" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0;0;0" keyTimes="0;0.73;0.75;0.78;0.82;0.99;1" dur="16s" repeatCount="indefinite"/><animate attributeName="r" values="1;1;1.5;4.5;5;1;1" keyTimes="0;0.73;0.75;0.76;0.8;0.99;1" dur="16s" repeatCount="indefinite"/></circle>
+      <g transform="rotate(45 32 32)"><rect x="28" y="28" width="8" height="8" fill="#312E81" stroke="#818CF8" stroke-width="1"><animate attributeName="fill" values="#312E81;#312E81;#4338CA;#312E81;#312E81;#4338CA;#34D399;#312E81;#312E81" keyTimes="0;0.27;0.35;0.42;0.77;0.85;0.9;0.96;1" dur="16s" repeatCount="indefinite"/><animate attributeName="stroke" values="#818CF8;#818CF8;#C7D2FE;#818CF8;#818CF8;#C7D2FE;#34D399;#818CF8;#818CF8" keyTimes="0;0.27;0.35;0.42;0.77;0.85;0.9;0.96;1" dur="16s" repeatCount="indefinite"/></rect></g>
+    </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Automatic Creativity Flow" aria-labelledby="title desc">
+      <title id="title">Automatic Creativity — Flow of Discovery</title>
+  <desc id="desc">Creates open-ended creative artifacts through raw material generation, perspective shifts, candidate pattern discovery, and small local interventions.</desc>
+      <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/><circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/></g>
+      <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="32" cy="56" r="1.1" fill="#A78BFA" opacity="0"><animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.02;0.06;0.55;0.8;0.92;1" dur="16s" repeatCount="indefinite"/></circle>
+      <path d="M32 56 Q24 44 18 32 Q16 26 18 20" stroke="#A78BFA" stroke-width="0.4" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.55;0.55;0.55;0;0" keyTimes="0;0.1;0.28;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></path>
+      <path d="M32 56 Q32 48 30 32 Q30 20 32 12" stroke="#22D3EE" stroke-width="0.4" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.55;0.55;0.55;0;0" keyTimes="0;0.1;0.28;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></path>
+      <path d="M32 56 Q40 44 46 32 Q48 26 46 20" stroke="#A78BFA" stroke-width="0.4" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.55;0.55;0.55;0;0" keyTimes="0;0.1;0.28;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></path>
+      <circle cx="18" cy="20" r="1.7" stroke="#A78BFA" stroke-width="0.7" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.8;0.8;0.8;0;0" keyTimes="0;0.2;0.34;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></circle>
+      <circle cx="32" cy="12" r="1.7" stroke="#22D3EE" stroke-width="0.7" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.8;0.8;0.8;0;0" keyTimes="0;0.2;0.34;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></circle>
+      <circle cx="46" cy="20" r="1.7" stroke="#A78BFA" stroke-width="0.7" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.8;0.8;0.8;0;0" keyTimes="0;0.2;0.34;0.55;0.8;0.9;1" dur="16s" repeatCount="indefinite"/></circle>
+      <circle cx="42" cy="34" r="1" fill="#E0E7FF" opacity="0"><animate attributeName="opacity" values="0;0;0.95;0.95;0;0" keyTimes="0;0.38;0.42;0.46;0.52;1" dur="16s" repeatCount="indefinite"/></circle>
+      <g transform="rotate(45 32 32)"><rect x="29.5" y="29.5" width="5" height="5" fill="#312E81" stroke="#818CF8" stroke-width="0.85"><animate attributeName="fill" values="#312E81;#312E81;#312E81;#4338CA;#312E81;#312E81" keyTimes="0;0.55;0.72;0.82;0.92;1" dur="16s" repeatCount="indefinite"/></rect></g>
+      <circle cx="32" cy="32" r="3" stroke="#A78BFA" stroke-width="0.3" fill="none" opacity="0"><animate attributeName="opacity" values="0;0;0.4;0.4;0" keyTimes="0;0.6;0.7;0.85;0.95" dur="16s" repeatCount="indefinite"/><animate attributeName="r" values="3;3;6;8;3" keyTimes="0;0.6;0.75;0.9;1" dur="16s" repeatCount="indefinite"/></circle>
+    </svg>

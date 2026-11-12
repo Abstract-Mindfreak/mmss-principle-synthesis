@@ -1,0 +1,127 @@
+# Companion data for mmss-adaptive-ux-laws-application
+# Primary: batch-01 Laws of UX (name + statement only)
+# Supporting: selected approaches from batch-02..06
+
+laws_of_ux:
+  - name: Aesthetic-Usability Effect
+    statement: Users often perceive aesthetically pleasing design as design that’s more usable.
+
+  - name: Choice Overload
+    statement: The tendency for people to get overwhelmed when they are presented with a large number of options, often used interchangeably with the term paradox of choice.
+
+  - name: Chunking
+    statement: A process by which individual pieces of an information set are broken down and then grouped together in a meaningful whole.
+
+  - name: Cognitive Bias
+    statement: A systematic error of thinking or rationality in judgment that influence our perception of the world and our decision-making ability.
+
+  - name: Cognitive Load
+    statement: The amount of mental resources needed to understand and interact with an interface.
+
+  - name: Doherty Threshold
+    statement: Productivity soars when a computer and its users interact at a pace (<400ms) that ensures that neither has to wait on the other.
+
+  - name: Fitts’s Law
+    statement: The time to acquire a target is a function of the distance to and size of the target.
+
+  - name: Flow
+    statement: The mental state in which a person performing some activity is fully immersed in a feeling of energized focus, full involvement, and enjoyment in the process of the activity.
+
+  - name: Goal-Gradient Effect
+    statement: The tendency to approach a goal increases with proximity to the goal.
+
+  - name: Hick’s Law
+    statement: The time it takes to make a decision increases with the number and complexity of choices.
+
+  - name: Jakob’s Law
+    statement: Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.
+
+  - name: Law of Common Region
+    statement: Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary.
+
+  - name: Law of Proximity
+    statement: Objects that are near, or proximate to each other, tend to be grouped together.
+
+  - name: Law of Prägnanz
+    statement: People will perceive and interpret ambiguous or complex images as the simplest form possible, because it is the interpretation that requires the least cognitive effort of us.
+
+  - name: Law of Similarity
+    statement: The human eye tends to perceive similar elements as a complete picture, shape, or group, even if those elements are separated.
+
+  - name: Law of Uniform Connectedness
+    statement: Elements that are visually connected are perceived as more related than elements with no connection.
+
+  - name: Mental Model
+    statement: A compressed model based on what we think we know about a system and how it works.
+
+  - name: Miller’s Law
+    statement: The average person can only keep 7 (plus or minus 2) items in their working memory.
+
+  - name: Occam’s Razor
+    statement: Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.
+
+  - name: Paradox of the Active User
+    statement: Users never read manuals but start using the software immediately.
+
+  - name: Pareto Principle
+    statement: The Pareto principle states that, for many events, roughly 80% of the effects come from 20% of the causes.
+
+  - name: Parkinson’s Law
+    statement: Any task will inflate until all of the available time is spent.
+
+  - name: Peak-End Rule
+    statement: People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or average of every moment of the experience.
+
+  - name: Postel’s Law
+    statement: Be liberal in what you accept, and conservative in what you send.
+
+  - name: Selective Attention
+    statement: The process of focusing our attention only to a subset of stimuli in an environment — usually those related to our goals.
+
+  - name: Serial Position Effect
+    statement: Users have a propensity to best remember the first and last items in a series.
+
+  - name: Tesler’s Law
+    statement: Tesler's Law, also known as The Law of Conservation of Complexity, states that for any system there is a certain amount of complexity which cannot be reduced.
+
+  - name: Von Restorff Effect
+    statement: The Von Restorff effect, also known as The Isolation Effect, predicts that when multiple similar objects are present, the one that differs from the rest is most likely to be remembered.
+
+  - name: Working Memory
+    statement: A cognitive system that temporarily holds and manipulates information needed to complete tasks.
+
+  - name: Zeigarnik Effect
+    statement: People remember uncompleted or interrupted tasks better than completed tasks.
+
+supporting_approaches:
+  - name: Pure Snapshot Autonomy
+    statement: Any report, export or proposal consumes only an immutable snapshot of the current state; never live or scattered intermediate values.
+    origin: batch-02
+
+  - name: Unidirectional State Flow
+    statement: User input → pure reduction to a single source-of-truth state → pure projections → side-effects applied once from the complete state.
+    origin: batch-02
+
+  - name: Cognitive Load as Hard Constraint
+    statement: The total mental resources demanded by visible and interactive elements must not exceed the user’s available cognitive capacity.
+    origin: batch-03
+
+  - name: Importance Ranking
+    statement: Rank elements by utility minus cost, adjusted by hierarchy and risk, before allocating attention or space.
+    origin: batch-03
+
+  - name: Pure Preview, Explicit Start
+    statement: Opening or previewing never creates runs, changes or side-effects; every mutating action requires an explicit, confirmed start.
+    origin: batch-05
+
+  - name: Distinct State Lanes
+    statement: Keep execution, automated checks, conclusions and user decisions as four separate lanes; never collapse them into a single status.
+    origin: batch-05
+
+  - name: No Auto-Acceptance of Proposals
+    statement: Proposed changes remain clearly labelled and are never accepted or applied on the user’s behalf.
+    origin: batch-05
+
+  - name: Feedback Intensity Mapping
+    statement: The intensity of a success or feedback event determines the appropriate channel (inline → toast → banner → modal) and the strength of temporary visual emphasis.
+    origin: batch-06

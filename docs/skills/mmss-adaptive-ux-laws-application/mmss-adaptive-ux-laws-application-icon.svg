@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="UX Laws Application" aria-labelledby="title desc">
+      <title id="title">MMSS Adaptive UX Laws Application</title>
+  <desc id="desc">Adaptive sequential application of Laws of UX (and hybrids) for multi-pass UI/UX review and improvement proposals.</desc>
+      <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/><circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/></g>
+      <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="32" cy="32" r="20" stroke="#374151" stroke-width="0.3" stroke-dasharray="1 2" opacity="0.4" fill="none"/>
+      <g stroke="#22D3EE" stroke-width="0.5" opacity="0">
+        <line x1="32" y1="22" x2="40.66" y2="27"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+        <line x1="40.66" y1="27" x2="40.66" y2="37"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+        <line x1="40.66" y1="37" x2="32" y2="42"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+        <line x1="32" y1="42" x2="23.34" y2="37"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+        <line x1="23.34" y1="37" x2="23.34" y2="27"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+        <line x1="23.34" y1="27" x2="32" y2="22"><animate attributeName="opacity" values="0;0;0.7;0.7;0" keyTimes="0;0.8;0.83;0.9;0.93" dur="15s" repeatCount="indefinite"/></line>
+      </g>
+      <circle cx="32" cy="12" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.02;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <circle cx="49.32" cy="22" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.128;0.138;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <circle cx="49.32" cy="42" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.262;0.272;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <circle cx="32" cy="52" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.395;0.405;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <circle cx="14.68" cy="42" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.528;0.538;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <circle cx="14.68" cy="22" r="1.9" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.8"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.662;0.672;0.78;0.93" dur="15s" repeatCount="indefinite"/></circle>
+      <g transform="rotate(45 32 32)"><rect x="28.5" y="28.5" width="7" height="7" fill="#312E81" stroke="#818CF8" stroke-width="0.9"><animate attributeName="fill" values="#312E81;#312E81;#4338CA;#4338CA;#312E81;#312E81" keyTimes="0;0.78;0.82;0.9;0.93;1" dur="15s" repeatCount="indefinite"/></rect></g>
+      <g><animateTransform attributeName="transform" type="rotate" values="0 32 32;360 32 32;360 32 32;0 32 32" keyTimes="0;0.8;0.93;1" dur="15s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.93;0.96;1" dur="15s" repeatCount="indefinite"/><line x1="32" y1="32" x2="32" y2="13" stroke="#22D3EE" stroke-width="0.5" opacity="0.6"/><circle cx="32" cy="12" r="1.4" fill="#22D3EE"/></g>
+    </svg>

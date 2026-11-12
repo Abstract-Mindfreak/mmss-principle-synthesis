@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="MMSS Integrated Kernel" aria-labelledby="title desc">
+  <title id="title">MMSS Integrated Kernel</title>
+  <desc id="desc">Seven fused mechanisms orbit the invariant core (family diamond = P_INTEGRATED_KERNEL_BOUNDARY_IDENTITY, always active). One mechanism activates at a time, rotating clockwise over 16s: Architecture Synthesis (cyan), Session Compaction (violet), Abstract Composition (indigo), Adaptive Research (green), Meta-Textual (orange), Open Combination (amber), Mirrored Meta (light). When a mechanism is active, a pulse ring flashes white around the diamond (kernel engaged), and the amber output diamond marks the requested artifact. After first activation, output remains lit until cycle end.</desc>
+
+  <!-- Family invariants -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Static orbit guide -->
+  <circle cx="32" cy="32" r="20" stroke="#374151" stroke-width="0.3" stroke-dasharray="1 2" opacity="0.4"/>
+
+  <!-- === 7 mechanisms orbiting at r=20 === -->
+
+  <!-- P0 Architecture Synthesis (cyan) — top -->
+  <circle cx="32" cy="12" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.02;0.04;0.11;0.13;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563;#4B5563" keyTimes="0;0.02;0.04;0.11;0.13;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P1 Session Compaction (violet) -->
+  <circle cx="47.63" cy="19.53" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.15;0.17;0.24;0.26;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#A78BFA;#A78BFA;#4B5563;#4B5563" keyTimes="0;0.15;0.17;0.24;0.26;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P2 Abstract Composition (indigo) -->
+  <circle cx="51.5" cy="36.45" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.29;0.31;0.38;0.40;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#818CF8;#818CF8;#4B5563;#4B5563" keyTimes="0;0.29;0.31;0.38;0.40;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P3 Adaptive Research (green) -->
+  <circle cx="40.68" cy="50.02" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.43;0.45;0.52;0.54;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#34D399;#34D399;#4B5563;#4B5563" keyTimes="0;0.43;0.45;0.52;0.54;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P4 Meta-Textual (orange) -->
+  <circle cx="23.32" cy="50.02" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.57;0.59;0.66;0.68;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#FB923C;#FB923C;#4B5563;#4B5563" keyTimes="0;0.57;0.59;0.66;0.68;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P5 Open Combination (amber) -->
+  <circle cx="12.5" cy="36.45" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.71;0.73;0.80;0.82;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#F59E0B;#F59E0B;#4B5563;#4B5563" keyTimes="0;0.71;0.73;0.80;0.82;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- P6 Mirrored Meta (light) -->
+  <circle cx="16.37" cy="19.53" r="1.2" fill="#4B5563">
+    <animate attributeName="r" values="1.2;1.2;2.2;2.2;1.2;1.2" keyTimes="0;0.85;0.87;0.94;0.96;1" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#4B5563;#4B5563;#E0E7FF;#E0E7FF;#4B5563;#4B5563" keyTimes="0;0.85;0.87;0.94;0.96;1" dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Family diamond = invariant core, always active -->
+  <g transform="rotate(45 32 32)">
+    <rect x="28.5" y="28.5" width="7" height="7" fill="#312E81" stroke="#818CF8" stroke-width="0.85">
+      <animate attributeName="fill" values="#312E81;#4338CA;#312E81" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#818CF8;#C7D2FE;#818CF8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Pulse ring: kernel engaged, 7 pulses per cycle -->
+  <circle cx="32" cy="32" r="6" fill="none" stroke="#E0E7FF" stroke-width="0.5" opacity="0">
+    <animate attributeName="opacity"
+      values="0;0.8;0;0.8;0;0.8;0;0.8;0;0.8;0;0.8;0;0.8;0;0"
+      keyTimes="0;0.05;0.09;0.19;0.23;0.33;0.37;0.47;0.51;0.61;0.65;0.75;0.79;0.89;0.93;1"
+      dur="16s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Arrow to output -->
+  <line x1="32" y1="38" x2="32" y2="48" stroke="#4B5563" stroke-width="0.5">
+    <animate attributeName="stroke" values="#4B5563;#4B5563;#E0E7FF;#E0E7FF;#4B5563" keyTimes="0;0.14;0.18;0.96;1" dur="16s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Amber output: requested artifact -->
+  <g transform="rotate(45 32 55)">
+    <rect x="29.5" y="52.5" width="5" height="5" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.7">
+      <animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A" keyTimes="0;0.14;0.18;0.96;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="stroke" values="#4C488F;#4C488F;#FBBF24;#FBBF24;#4C488F" keyTimes="0;0.14;0.18;0.96;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

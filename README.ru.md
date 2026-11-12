@@ -1,16 +1,18 @@
 # MMSS Principle Synthesis
 
+<p align="center"><img src="docs/assets/mmss-icon.svg" width="128" height="128" alt="MMSS"></p>
+
 Синтез архитектур с учётом источников и границ выводов для ИИ-агентов.
 
 Создание, аудит, исправление, расширение и перенос модульных архитектур MMSS на основе источников, требований или существующих систем.
 
 [English](README.md) · [Русский](README.ru.md)
 
-![Лицензия: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Версии скилла: 0.3.0 и 0.1.5](https://img.shields.io/badge/skills-0.3.0%20%7C%200.1.5-blue.svg) ![Статус: экспериментальный](https://img.shields.io/badge/status-experimental-orange.svg) [![Проверка репозитория](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
+![Лицензия: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Составной скилл: 0.3.0](https://img.shields.io/badge/composite-0.3.0-blue.svg) ![Монолитный снимок: 0.1.5](https://img.shields.io/badge/monolithic-0.1.5-lightgrey.svg) ![Статус: экспериментальный](https://img.shields.io/badge/status-experimental-orange.svg) [![Проверка репозитория](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml/badge.svg)](https://github.com/Abstract-Mindfreak/mmss-principle-synthesis/actions/workflows/validate.yml)
 
 ## Обзор
 
-MMSS Principle Synthesis — это Agent Skill: файл инструкций для структурированной работы ИИ-агента с архитектурами. MMSS — проектный архитектурный термин; репозиторий не предлагает его расшифровку.
+MMSS Principle Synthesis — это Agent Skill: файл инструкций для структурированной работы ИИ-агента с архитектурами. При явной расшифровке MMSS означает **Meta-Meta-Synthesizer Systems**; если расшифровка не указана, аббревиатура остаётся открытой для интерпретации в контексте.
 
 ## Возможности
 
@@ -21,31 +23,57 @@ MMSS Principle Synthesis — это Agent Skill: файл инструкций �
 
 ## Редакции скилла
 
-В репозитории доступны две отдельно устанавливаемые редакции:
+| Иконка редакции | Пакет скилла | Версия | Назначение |
+| --- | --- | --- | --- |
+| <img src="docs/skills/mmss-principle-synthesis/mmss-principle-synthesis-icon.svg" width="64" height="64" alt=""> | [`mmss-principle-synthesis`](skills/mmss-principle-synthesis/SKILL.md) | **0.3.0 · основной** | Рекомендуемый стартовый скилл; основные инструкции используют два справочных файла-компаньона. |
+| <img src="docs/skills/mmss-principle-synthesis-monolithic/mmss-principle-synthesis-monolithic-icon.svg" width="64" height="64" alt=""> | [`mmss-principle-synthesis-monolithic`](skills/mmss-principle-synthesis-monolithic/SKILL.md) | **0.1.5 · сохранённый снимок** | Предыдущая полная однофайловая редакция для тех, кому нужно именно это содержимое. |
 
-- **Составная v0.3.0** (`mmss-principle-synthesis`): основные инструкции и справочный материал в `ALL_REFERENCES.md`, индексированный через `DISPATCH.md`. Эти файлы образуют один пакет и должны оставаться вместе. Руководство помогает агенту найти и прочитать нужный раздел; исполняемого загрузчика в пакете нет.
-- **Монолитная v0.1.5** (`mmss-principle-synthesis-monolithic`): предыдущая однофайловая редакция, сохранённая как отдельный скилл. Уникальное имя позволяет обнаруживать обе редакции рядом.
+Начинайте с **составной редакции v0.3.0** — это основной рекомендуемый стартовый скилл репозитория. У него есть два обязательных файла-компаньона:
 
-Редакции поддерживаются как отдельные версии. Текст монолитной копии соответствует v0.1.5; изменено только имя в frontmatter, чтобы избежать дублирования идентификатора скилла. Эквивалентность их поведения не заявляется.
+| Файл | Назначение | Raw |
+| --- | --- | --- |
+| [`SKILL.md`](skills/mmss-principle-synthesis/SKILL.md) | Основные инструкции и точка входа скилла | [Открыть raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-principle-synthesis/SKILL.md) |
+| [`DISPATCH.md`](skills/mmss-principle-synthesis/DISPATCH.md) | Индекс ID и маркеров, по которому агент находит нужный раздел справочника | [Открыть raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-principle-synthesis/DISPATCH.md) |
+| [`ALL_REFERENCES.md`](skills/mmss-principle-synthesis/ALL_REFERENCES.md) | Полный корпус справочных разделов, на которые ссылаются инструкции | [Открыть raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-principle-synthesis/ALL_REFERENCES.md) |
+
+`SKILL.md` — стартовая инструкция; `DISPATCH.md` помогает выбрать нужный материал из `ALL_REFERENCES.md`. Чату должны быть доступны все три файла. `DISPATCH.md` — документационный индекс, а не исполняемый загрузчик.
+
+**Монолитная v0.1.5** (`mmss-principle-synthesis-monolithic`) — сохранённый однофайловый снимок предыдущей редакции. Выбирайте её, если нужен один полный файл или именно это историческое содержимое: [README](docs/skills/mmss-principle-synthesis-monolithic/README.md) · [SKILL.md](skills/mmss-principle-synthesis-monolithic/SKILL.md) · [raw SKILL.md](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-principle-synthesis-monolithic/SKILL.md).
+
+Номера версий относятся к двум разным идентификаторам скилла, а не к синхронным сборкам одного пакета. Поэтому версии 0.3.0 и 0.1.5 намеренно различаются. Монолитная копия сохраняет текст v0.1.5; изменено только имя в frontmatter, чтобы пакеты обнаруживались отдельно.
 
 ## Связанные скиллы
 
-Десять связанных скиллов доступны как самостоятельные соседние пакеты в каталоге [`skills/`](skills/):
+Двадцать шесть связанных пакетов доступны как самостоятельные каталоги в [`skills/`](skills/).
 
-| Скилл | Назначение |
-| --- | --- |
-| [`adaptive-commercial-specializer`](skills/adaptive-commercial-specializer/SKILL.md) | Создаёт коммерческие специализации на основе исходных материалов. |
-| [`adaptive-open-skill-synthesizer`](skills/adaptive-open-skill-synthesizer/SKILL.md) | Создаёт и перестраивает скиллы с открытыми переменными. |
-| [`adaptive-sp-combinator`](skills/adaptive-sp-combinator/SKILL.md) | Исследует и комбинирует скиллы, системы и свойства. |
-| [`data-to-skill`](skills/data-to-skill/SKILL.md) | Преобразует предоставленные данные в скилл. |
-| [`data-to-skill-transformer`](skills/data-to-skill-transformer/SKILL.md) | Преобразует данные в спецификацию скилла. |
-| [`mmss-schema-guided-agent-bridge`](skills/mmss-schema-guided-agent-bridge/SKILL.md) | Связывает схемы, маршрутизацию и архитектуры агентов. |
-| [`session-process-logger`](skills/session-process-logger/SKILL.md) | Фиксирует процесс по материалам сессии. |
-| [`session-to-skill`](skills/session-to-skill/SKILL.md) | Создаёт скилл на основе материалов сессии. |
-| [`skill-boundary-combinator`](skills/skill-boundary-combinator/SKILL.md) | Комбинирует скиллы с учётом их границ. |
-| [`skill-quick-sampler`](skills/skill-quick-sampler/SKILL.md) | Быстро изучает и описывает каталоги скиллов. |
-
-Это самостоятельные пакеты. Их описания связей и контрактов приведены в самих скиллах; их перечисление здесь не означает, что у всех одинаковые контракты.
+| Иконка | Скилл | Назначение | Raw SKILL.md |
+| --- | --- | --- | --- |
+| <img src="docs/skills/action-sufficient-latent-compression/action-sufficient-latent-compression-icon.svg" width="48" height="48" alt=""> | [`action-sufficient-latent-compression`](docs/skills/action-sufficient-latent-compression/README.md) | Сжимает длинные наблюдения инструментов, сохраняя данные для следующего действия. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/action-sufficient-latent-compression/SKILL.md) |
+| <img src="docs/skills/adaptive-commercial-specializer/adaptive-commercial-specializer-icon.svg" width="48" height="48" alt=""> | [`adaptive-commercial-specializer`](docs/skills/adaptive-commercial-specializer/README.md) | Создаёт практические коммерческие специализации из материалов и ограничений. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/adaptive-commercial-specializer/SKILL.md) |
+| <img src="docs/skills/adaptive-open-skill-synthesizer/adaptive-open-skill-synthesizer-icon.svg" width="48" height="48" alt=""> | [`adaptive-open-skill-synthesizer`](docs/skills/adaptive-open-skill-synthesizer/README.md) | Создаёт и перестраивает скиллы с открытыми переменными. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/adaptive-open-skill-synthesizer/SKILL.md) |
+| <img src="docs/skills/adaptive-ux-correction-invariant/adaptive-ux-correction-invariant-icon.svg" width="48" height="48" alt=""> | [`adaptive-ux-correction-invariant`](docs/skills/adaptive-ux-correction-invariant/README.md) | Диагностирует интерфейсы и предлагает минимальные UX-исправления по устойчивым инвариантам. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/adaptive-ux-correction-invariant/SKILL.md) |
+| <img src="docs/skills/adaptive-ux-orchestrator/adaptive-ux-orchestrator-icon.svg" width="48" height="48" alt=""> | [`adaptive-ux-orchestrator`](docs/skills/adaptive-ux-orchestrator/README.md) | Координирует последовательную работу с законами UX и исправлениями. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/adaptive-ux-orchestrator/SKILL.md) |
+| <img src="docs/skills/animated-svg-icon-composer/animated-svg-icon-composer-icon.svg" width="48" height="48" alt=""> | [`animated-svg-icon-composer`](docs/skills/animated-svg-icon-composer/README.md) | Создаёт автономные анимированные SVG-иконки по смысловому описанию. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/animated-svg-icon-composer/SKILL.md) |
+| <img src="docs/skills/automatic-creativity-flow/automatic-creativity-flow-icon.svg" width="48" height="48" alt=""> | [`automatic-creativity-flow`](docs/skills/automatic-creativity-flow/README.md) | Создаёт материалы через генерацию исходников, смену перспектив и локальные вмешательства. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/automatic-creativity-flow/SKILL.md) |
+| <img src="docs/skills/data-to-skill/data-to-skill-icon.svg" width="48" height="48" alt=""> | [`data-to-skill`](docs/skills/data-to-skill/README.md) | Преобразует исходные материалы в скиллы с выбираемыми операциями синтеза. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/data-to-skill/SKILL.md) |
+| <img src="docs/skills/data-to-skill-transformer/data-to-skill-transformer-icon.svg" width="48" height="48" alt=""> | [`data-to-skill-transformer`](docs/skills/data-to-skill-transformer/README.md) | Применяет предписанный процесс из семи шагов и по умолчанию создаёт SKILL.md. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/data-to-skill-transformer/SKILL.md) |
+| <img src="docs/skills/meta-hypergraph-ontology-alchemy/meta-hypergraph-ontology-alchemy-icon.svg" width="48" height="48" alt=""> | [`meta-hypergraph-ontology-alchemy`](docs/skills/meta-hypergraph-ontology-alchemy/README.md) | Исследует альтернативы онтологий и зеркальные структуры метауровней. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/meta-hypergraph-ontology-alchemy/SKILL.md) |
+| <img src="docs/skills/mmss-adaptive-sp-combinator/mmss-adaptive-sp-combinator-icon.svg" width="48" height="48" alt=""> | [`mmss-adaptive-sp-combinator`](docs/skills/mmss-adaptive-sp-combinator/README.md) | Исследует и комбинирует скиллы, системы и свойства, сохраняя контракты MMSS. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-adaptive-sp-combinator/SKILL.md) |
+| <img src="docs/skills/mmss-adaptive-ux-laws-application/mmss-adaptive-ux-laws-application-icon.svg" width="48" height="48" alt=""> | [`mmss-adaptive-ux-laws-application`](docs/skills/mmss-adaptive-ux-laws-application/README.md) | Последовательно применяет Laws of UX для поиска проблем и измеримых предложений. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-adaptive-ux-laws-application/SKILL.md) |
+| <img src="docs/skills/mmss-domain-specialist-synthesizer/mmss-domain-specialist-synthesizer-icon.svg" width="48" height="48" alt=""> | [`mmss-domain-specialist-synthesizer`](docs/skills/mmss-domain-specialist-synthesizer/README.md) | Создаёт самостоятельные предметные скиллы, совместимые с MMSS. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-domain-specialist-synthesizer/SKILL.md) |
+| <img src="docs/skills/mmss-integrated-kernel/mmss-integrated-kernel-icon.svg" width="48" height="48" alt=""> | [`mmss-integrated-kernel`](docs/skills/mmss-integrated-kernel/README.md) | Объединяет механизмы архитектуры MMSS, сжатия сессий и доказательного исследования. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-integrated-kernel/SKILL.md) |
+| <img src="docs/skills/mmss-jepa-platonic-meta-unifier/mmss-jepa-platonic-meta-unifier-icon.svg" width="48" height="48" alt=""> | [`mmss-jepa-platonic-meta-unifier`](docs/skills/mmss-jepa-platonic-meta-unifier/README.md) | Объединяет инварианты JEPA–Platonic в MMSS и родственных архитектурах. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-jepa-platonic-meta-unifier/SKILL.md) |
+| <img src="docs/skills/mmss-schema-guided-agent-bridge/mmss-schema-guided-agent-bridge-icon.svg" width="48" height="48" alt=""> | [`mmss-schema-guided-agent-bridge`](docs/skills/mmss-schema-guided-agent-bridge/README.md) | Связывает схемы, маршрутизацию и архитектуры агентов. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-schema-guided-agent-bridge/SKILL.md) |
+| <img src="docs/skills/mmss-skill-boundary-combinator/mmss-skill-boundary-combinator-icon.svg" width="48" height="48" alt=""> | [`mmss-skill-boundary-combinator`](docs/skills/mmss-skill-boundary-combinator/README.md) | Комбинирует скиллы с учётом границ и инвариантов MMSS. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-skill-boundary-combinator/SKILL.md) |
+| <img src="docs/skills/mmss-skill-router/mmss-skill-router-icon.svg" width="48" height="48" alt=""> | [`mmss-skill-router`](docs/skills/mmss-skill-router/README.md) | Направляет задачи MMSS к подходящим скиллам. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-skill-router/SKILL.md) |
+| <img src="docs/skills/mmss-mta-delta-architect/mmss-mta-delta-architect-icon.svg" width="48" height="48" alt=""> | [`mmss-mta-delta-architect`](docs/skills/mmss-mta-delta-architect/README.md) | Создаёт и развивает Meta-Textual Architectures для MMSS. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-mta-delta-architect/SKILL.md) |
+| <img src="docs/skills/quantum-hyperloop-research-agent/quantum-hyperloop-research-agent-icon.svg" width="48" height="48" alt=""> | [`quantum-hyperloop-research-agent`](docs/skills/quantum-hyperloop-research-agent/README.md) | Планирует и выполняет адаптивное исследование с учётом свидетельств. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/quantum-hyperloop-research-agent/SKILL.md) |
+| <img src="docs/skills/quantum-meta-architect/quantum-meta-architect-icon.svg" width="48" height="48" alt=""> | [`quantum-meta-architect`](docs/skills/quantum-meta-architect/README.md) | Выполняет ограниченный метаанализ задач, архитектур и методов исследования. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/quantum-meta-architect/SKILL.md) |
+| <img src="docs/skills/mmss-reopen-the-problem/mmss-reopen-the-problem-icon.svg" width="48" height="48" alt=""> | [`mmss-reopen-the-problem`](docs/skills/mmss-reopen-the-problem/README.md) | Переформулирует задачу, отделяя намерение и ограничения от привычной формы. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-reopen-the-problem/SKILL.md) |
+| <img src="docs/skills/session-process-logger/session-process-logger-icon.svg" width="48" height="48" alt=""> | [`session-process-logger`](docs/skills/session-process-logger/README.md) | Создаёт прослеживаемые ретроспективные журналы по свидетельствам сессии. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/session-process-logger/SKILL.md) |
+| <img src="docs/skills/session-to-skill/session-to-skill-icon.svg" width="48" height="48" alt=""> | [`session-to-skill`](docs/skills/session-to-skill/README.md) | Создаёт переиспользуемый скилл по материалам сессии. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/session-to-skill/SKILL.md) |
+| <img src="docs/skills/skill-quick-sampler/skill-quick-sampler-icon.svg" width="48" height="48" alt=""> | [`skill-quick-sampler`](docs/skills/skill-quick-sampler/README.md) | Изучает каталоги скиллов и создаёт краткие примеры использования. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/skill-quick-sampler/SKILL.md) |
+| <img src="docs/skills/mmss-symmetric-meta-hypergraph-synthesis/mmss-symmetric-meta-hypergraph-synthesis-icon.svg" width="48" height="48" alt=""> | [`mmss-symmetric-meta-hypergraph-synthesis`](docs/skills/mmss-symmetric-meta-hypergraph-synthesis/README.md) | Извлекает и комбинирует шаблоны симметричных метауровней. | [Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-symmetric-meta-hypergraph-synthesis/SKILL.md) |
 
 ## Быстрый старт
 
@@ -77,7 +105,7 @@ npx skills add . --list
 
 ## Совместимость
 
-Каждый пакет использует соглашение Agent Skills `SKILL.md` с YAML frontmatter. Skills CLI поддерживает поиск скиллов в репозитории и выбор по имени. Установка на отдельных платформах в этом репозитории не проверялась; поведение может различаться.
+Каждый пакет использует соглашение Agent Skills `SKILL.md` с YAML frontmatter. Skills CLI поддерживает поиск скиллов в репозитории и выбор по имени. Установка на отдельных платформах в этом репозитории не проверялась; поведение может различаться. Для каждого скилла создана отдельная страница документации с собственной SVG-иконкой, подключённой через HTML-элемент `<img>`; анимация сохранена в исходных анимированных файлах.
 
 ## Проверки и ограничения
 
@@ -89,9 +117,11 @@ npx skills add . --list
 | --- | --- |
 | `skills/mmss-principle-synthesis/` | Составной пакет v0.3.0: `SKILL.md`, `ALL_REFERENCES.md` и `DISPATCH.md` |
 | `skills/mmss-principle-synthesis-monolithic/SKILL.md` | Монолитная редакция v0.1.5 |
-| `skills/<related-skill>/SKILL.md` | Десять самостоятельных связанных скиллов |
+| `skills/<skill-name>/SKILL.md` и `docs/skills/<skill-name>/README.md` | Двадцать шесть самостоятельных связанных скиллов |
 | `examples/` | Синтетические запросы и ожидаемые свойства |
-| `docs/` | Принципы проектирования и границы оценки |
+| `docs/` | Принципы проектирования, границы оценки и индивидуальные README скиллов |
+| `docs/skills/<skill-name>/` | Индивидуальные README и соответствующая SVG-иконка каждого связанного скилла |
+| `docs/assets/mmss-icon.svg` | Общий анимированный знак MMSS для репозитория |
 | `scripts/validate_repository.py` | Локальный валидатор упаковки |
 | `.github/workflows/validate.yml` | Проверки репозитория только для чтения |
 

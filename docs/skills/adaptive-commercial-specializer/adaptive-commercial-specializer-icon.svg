@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Commercial Specializer" aria-labelledby="title desc">
+      <title id="title">Adaptive Commercial Specializer</title>
+  <desc id="desc">Generates practically usable commercial specializations from available material (existing skills, session findings, tools, external signals, user constraints).</desc>
+      <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="44s" repeatCount="indefinite"/><circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/></g>
+      <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/></circle>
+      <polygon points="32,23 38,26.5 38,33.5 32,37 26,33.5 26,26.5" stroke="#818CF8" stroke-width="0.7" fill="#1F1E4A" fill-opacity="0.4"><animate attributeName="stroke" values="#818CF8;#818CF8;#E0E7FF;#E0E7FF;#818CF8" keyTimes="0;0.55;0.6;0.65;0.7" dur="14s" repeatCount="indefinite"/></polygon>
+      <circle cx="32" cy="30" r="0.6" fill="#C7D2FE"/>
+      <circle cx="32" cy="20" r="1.2" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.6"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.02;0.04;0.09;0.11" dur="14s" repeatCount="indefinite"/></circle>
+      <circle cx="40.7" cy="23.1" r="1.2" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.6"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.12;0.14;0.19;0.21" dur="14s" repeatCount="indefinite"/></circle>
+      <circle cx="37.4" cy="36.9" r="1.2" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.6"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.22;0.24;0.29;0.31" dur="14s" repeatCount="indefinite"/></circle>
+      <circle cx="26.6" cy="36.9" r="1.2" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.6"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.32;0.34;0.39;0.41" dur="14s" repeatCount="indefinite"/></circle>
+      <circle cx="23.3" cy="23.1" r="1.2" fill="#0B0F1A" stroke="#4B5563" stroke-width="0.6"><animate attributeName="stroke" values="#4B5563;#4B5563;#22D3EE;#22D3EE;#4B5563" keyTimes="0;0.42;0.44;0.49;0.51" dur="14s" repeatCount="indefinite"/></circle>
+      <line x1="32" y1="23" x2="32" y2="12" stroke="#F59E0B" stroke-width="0.6" opacity="0.4"><animate attributeName="opacity" values="0.4;0.4;1;1;0.4" keyTimes="0;0.65;0.7;0.78;0.82" dur="14s" repeatCount="indefinite"/></line>
+      <polygon points="30.8,13 33.2,13 32,10.5" fill="#F59E0B" opacity="0.4"><animate attributeName="opacity" values="0.4;0.4;1;1;0.4" keyTimes="0;0.65;0.7;0.78;0.82" dur="14s" repeatCount="indefinite"/></polygon>
+      <line x1="38" y1="30" x2="50" y2="30" stroke="#34D399" stroke-width="0.4" opacity="0.25"><animate attributeName="opacity" values="0.25;0.6;0.25" keyTimes="0;0.3;0.36" dur="14s" repeatCount="indefinite"/></line>
+      <line x1="32" y1="37" x2="32" y2="47" stroke="#6B7280" stroke-width="0.4" opacity="0.2"><animate attributeName="opacity" values="0.2;0.5;0.2" keyTimes="0;0.45;0.51" dur="14s" repeatCount="indefinite"/></line>
+      <line x1="26" y1="30" x2="14" y2="30" stroke="#22D3EE" stroke-width="0.4" opacity="0.25"><animate attributeName="opacity" values="0.25;0.6;0.25" keyTimes="0;0.55;0.61" dur="14s" repeatCount="indefinite"/></line>
+      <g transform="rotate(45 32 55)"><rect x="29" y="52" width="6" height="6" fill="#1F1E4A" stroke="#4C488F" stroke-width="0.8"><animate attributeName="fill" values="#1F1E4A;#1F1E4A;#F59E0B;#F59E0B;#1F1E4A" keyTimes="0;0.76;0.82;0.92;0.96" dur="14s" repeatCount="indefinite"/></rect></g>
+    </svg>
