@@ -83,7 +83,13 @@ Install the composite edition with the [Skills CLI](https://github.com/vercel-la
 npx skills add Abstract-Mindfreak/mmss-principle-synthesis --skill mmss-principle-synthesis
 ```
 
-To list skills in a local checkout without installing them:
+To list all skills directly from the remote repository without installing them:
+
+```sh
+npx skills add Abstract-Mindfreak/mmss-principle-synthesis --list
+```
+
+To list skills from an existing local checkout, run this from the repository root:
 
 ```sh
 npx skills add . --list

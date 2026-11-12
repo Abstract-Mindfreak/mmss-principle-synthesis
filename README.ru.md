@@ -83,7 +83,13 @@ MMSS Principle Synthesis — это Agent Skill: файл инструкций �
 npx skills add Abstract-Mindfreak/mmss-principle-synthesis --skill mmss-principle-synthesis
 ```
 
-Чтобы обнаружить скиллы в локальной копии без установки:
+Чтобы вывести список всех скиллов прямо из удалённого репозитория без установки:
+
+```sh
+npx skills add Abstract-Mindfreak/mmss-principle-synthesis --list
+```
+
+Чтобы вывести скиллы из уже клонированной копии, выполните команду из корня репозитория:
 
 ```sh
 npx skills add . --list
