@@ -36,6 +36,7 @@ REQUIRED_FILES = (
     "scripts/validate_repository.py",
 )
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
+IGNORED_SCAN_DIRS = {".git", ".potential_updates", "local-audits"}
 
 
 def reject_constant(value: str) -> None:
@@ -61,17 +62,15 @@ def parse_frontmatter(path: Path, errors: list[str], expected_version: str | Non
         errors.append(f"{path.relative_to(ROOT)}: missing YAML frontmatter closer")
         return
     block = text[4:end]
-    # Parse the restricted, scalar/list subset used in this SKILL.md. Reject
-    # malformed indentation and duplicate top-level fields explicitly.
+    # Read the top-level fields needed by this validator while allowing the
+    # nested YAML structures used by descriptions and metadata to pass through.
     top: dict[str, str] = {}
     current: str | None = None
     for line_number, line in enumerate(block.splitlines(), start=2):
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         if line.startswith("  "):
-            if current == "description" and line.startswith("  "):
-                continue
-            if current == "metadata" and re.match(r"^  [A-Za-z_][\w-]*:\s*", line):
+            if current in {"description", "metadata"}:
                 continue
             errors.append(f"{path.relative_to(ROOT)}:{line_number}: invalid frontmatter indentation")
             continue
@@ -99,7 +98,8 @@ def parse_frontmatter(path: Path, errors: list[str], expected_version: str | Non
 
 def check_links(errors: list[str]) -> None:
     for path in ROOT.rglob("*.md"):
-        if ".git" in path.parts:
+        relative = path.relative_to(ROOT)
+        if relative.parts and relative.parts[0] in IGNORED_SCAN_DIRS:
             continue
         for target in LINK_RE.findall(path.read_text(encoding="utf-8")):
             target = target.strip().split("#", 1)[0]

@@ -6,6 +6,7 @@
 - Clarified the distinct procedures and output contracts of `data-to-skill` and `data-to-skill-transformer`.
 - Expanded the standalone skill catalogue from ten to twenty-six related skills, with individual documentation and animated icons.
 - Added direct source links and clarified the composite v0.3.0 starting skill and retained monolithic v0.1.5 snapshot.
+- Updated repository validation to accept nested skill metadata and skip ignored staging and audit directories during local link scans.
 
 ## 0.3.0
 
