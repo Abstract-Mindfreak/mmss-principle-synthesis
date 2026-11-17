@@ -31,6 +31,7 @@ First resolve the requested outcome and artifact. Then choose the narrowest matc
 
 - **Direct MMSS architecture work:** use `mmss-principle-synthesis` as the primary skill. Do not add a combinator if the direction is already clear and no cross-skill choice is needed.
 - **Open direction or composition across skills/properties:** use `mmss-adaptive-sp-combinator` to select or form the approach; use `mmss-skill-boundary-combinator` where its explicit combination modes, P-chain, or boundary-preserving merge are relevant. Multiple supporting skills are appropriate when the task asks for combined selection or they contribute separate necessary functions.
+- **Just-in-time skill combinations or explicit variation sets:** use `mmss-metacrystal-variation-generator` when the user requests alternatives, or a concrete task would materially benefit from combining available skills. In just-in-time mode it selects and applies one minimal sufficient combination; use `mmss-adaptive-sp-combinator` when the task is to discover or transform the combination method itself.
 - **Source material to reusable skill:** use `data-to-skill`; add `adaptive-open-skill-synthesizer` when the skill's form or search mode must be discovered or transformed.
 - **Schema-first agent, routing fabric, or cascade contracts:** add `mmss-schema-guided-agent-bridge` for that contract layer.
 - **New route discovered:** use an available specialist or propose a new branch only when evidence or the user goal exposes a capability gap. Keep its source, conditions, and limitations explicit.

@@ -44,7 +44,7 @@ The version numbers belong to two different skill IDs, not synchronized builds o
 
 ## Related skills
 
-Twenty-six related skill packages are available as independent siblings under [`skills/`](skills/).
+Twenty-seven related skill packages are available as independent siblings under [`skills/`](skills/).
 
 | Icon SVG | Skill | Role | Raw SKILL.md |
 | --- | --- | --- | --- |
@@ -55,6 +55,7 @@ Twenty-six related skill packages are available as independent siblings under [`
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-schema-guided-agent-bridge/mmss-schema-guided-agent-bridge-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-schema-guided-agent-bridge`](docs/skills/mmss-schema-guided-agent-bridge/README.md) | Connects schemas, routing, and agent architectures. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-schema-guided-agent-bridge/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-mta-delta-architect/mmss-mta-delta-architect-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-mta-delta-architect`](docs/skills/mmss-mta-delta-architect/README.md) | Builds and evolves Meta-Textual Architectures for MMSS. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-mta-delta-architect/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-adaptive-sp-combinator/mmss-adaptive-sp-combinator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-adaptive-sp-combinator`](docs/skills/mmss-adaptive-sp-combinator/README.md) | Explores and combines skills, systems, properties, and combination methods while preserving MMSS contracts. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-adaptive-sp-combinator/SKILL.md)<br> |
+| &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-metacrystal-variation-generator/mmss-metacrystal-variation-generator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-metacrystal-variation-generator`](docs/skills/mmss-metacrystal-variation-generator/README.md) | Selects and applies a minimal useful skill combination on demand, or explores distinct variations with templates. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-metacrystal-variation-generator/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-skill-boundary-combinator/mmss-skill-boundary-combinator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-skill-boundary-combinator`](docs/skills/mmss-skill-boundary-combinator/README.md) | Combines skills while tracking boundaries and MMSS invariants. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-skill-boundary-combinator/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-symmetric-meta-hypergraph-synthesis/mmss-symmetric-meta-hypergraph-synthesis-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-symmetric-meta-hypergraph-synthesis`](docs/skills/mmss-symmetric-meta-hypergraph-synthesis/README.md) | Extracts and combines reusable patterns in symmetric meta-level structures. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-symmetric-meta-hypergraph-synthesis/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-jepa-platonic-meta-unifier/mmss-jepa-platonic-meta-unifier-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-jepa-platonic-meta-unifier`](docs/skills/mmss-jepa-platonic-meta-unifier/README.md) | Unifies robust JEPA–Platonic invariants across MMSS and related architectures. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-jepa-platonic-meta-unifier/SKILL.md)<br> |
@@ -123,7 +124,7 @@ The local validator checks repository packaging, skill frontmatter, JSON fixture
 | --- | --- |
 | `skills/mmss-principle-synthesis/` | Composite v0.3.0 package: `SKILL.md`, `ALL_REFERENCES.md`, and `DISPATCH.md` |
 | `skills/mmss-principle-synthesis-monolithic/SKILL.md` | Monolithic v0.1.5 edition |
-| `skills/<skill-name>/SKILL.md` and `docs/skills/<skill-name>/README.md` | Twenty-six standalone related skill packages |
+| `skills/<skill-name>/SKILL.md` and `docs/skills/<skill-name>/README.md` | Twenty-seven standalone related skill packages |
 | `examples/` | Synthetic prompts and expected properties |
 | `docs/` | Design principles, evaluation scope, and individual skill READMEs |
 | `docs/skills/<skill-name>/` | Individual README and matching SVG icon for each related skill |

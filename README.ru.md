@@ -44,7 +44,7 @@ MMSS Principle Synthesis — это Agent Skill: файл инструкций �
 
 ## Связанные скиллы
 
-Двадцать шесть связанных пакетов доступны как самостоятельные каталоги в [`skills/`](skills/).
+Двадцать семь связанных пакетов доступны как самостоятельные каталоги в [`skills/`](skills/).
 
 | Иконка SVG | Скилл | Назначение | Raw SKILL.md |
 | --- | --- | --- | --- |
@@ -55,6 +55,7 @@ MMSS Principle Synthesis — это Agent Skill: файл инструкций �
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-schema-guided-agent-bridge/mmss-schema-guided-agent-bridge-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-schema-guided-agent-bridge`](docs/skills/mmss-schema-guided-agent-bridge/README.md) | Связывает схемы, маршрутизацию и архитектуры агентов. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-schema-guided-agent-bridge/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-mta-delta-architect/mmss-mta-delta-architect-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-mta-delta-architect`](docs/skills/mmss-mta-delta-architect/README.md) | Создаёт и развивает Meta-Textual Architectures для MMSS. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-mta-delta-architect/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-adaptive-sp-combinator/mmss-adaptive-sp-combinator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-adaptive-sp-combinator`](docs/skills/mmss-adaptive-sp-combinator/README.md) | Исследует и комбинирует скиллы, системы и свойства, сохраняя контракты MMSS. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-adaptive-sp-combinator/SKILL.md)<br> |
+| &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-metacrystal-variation-generator/mmss-metacrystal-variation-generator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-metacrystal-variation-generator`](docs/skills/mmss-metacrystal-variation-generator/README.md) | По ситуации подбирает и применяет минимально достаточную связку скиллов или исследует варианты с шаблонами активации. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-metacrystal-variation-generator/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-skill-boundary-combinator/mmss-skill-boundary-combinator-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-skill-boundary-combinator`](docs/skills/mmss-skill-boundary-combinator/README.md) | Комбинирует скиллы с учётом границ и инвариантов MMSS. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-skill-boundary-combinator/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-symmetric-meta-hypergraph-synthesis/mmss-symmetric-meta-hypergraph-synthesis-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-symmetric-meta-hypergraph-synthesis`](docs/skills/mmss-symmetric-meta-hypergraph-synthesis/README.md) | Извлекает и комбинирует шаблоны симметричных метауровней. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-symmetric-meta-hypergraph-synthesis/SKILL.md)<br> |
 | &nbsp;&nbsp;&nbsp;<img src="docs/skills/mmss-jepa-platonic-meta-unifier/mmss-jepa-platonic-meta-unifier-icon.svg" width="64" height="64" alt="">&nbsp;&nbsp;&nbsp; | [`mmss-jepa-platonic-meta-unifier`](docs/skills/mmss-jepa-platonic-meta-unifier/README.md) | Объединяет инварианты JEPA–Platonic в MMSS и родственных архитектурах. | <br>[Raw](https://raw.githubusercontent.com/Abstract-Mindfreak/mmss-principle-synthesis/main/skills/mmss-jepa-platonic-meta-unifier/SKILL.md)<br> |
@@ -123,7 +124,7 @@ npx skills add . --list
 | --- | --- |
 | `skills/mmss-principle-synthesis/` | Составной пакет v0.3.0: `SKILL.md`, `ALL_REFERENCES.md` и `DISPATCH.md` |
 | `skills/mmss-principle-synthesis-monolithic/SKILL.md` | Монолитная редакция v0.1.5 |
-| `skills/<skill-name>/SKILL.md` и `docs/skills/<skill-name>/README.md` | Двадцать шесть самостоятельных связанных скиллов |
+| `skills/<skill-name>/SKILL.md` и `docs/skills/<skill-name>/README.md` | Двадцать семь самостоятельных связанных скиллов |
 | `examples/` | Синтетические запросы и ожидаемые свойства |
 | `docs/` | Принципы проектирования, границы оценки и индивидуальные README скиллов |
 | `docs/skills/<skill-name>/` | Индивидуальные README и соответствующая SVG-иконка каждого связанного скилла |

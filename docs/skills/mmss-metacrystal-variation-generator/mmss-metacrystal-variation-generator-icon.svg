@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" fill="none" role="img" aria-label="MMSS Metacrystal Variation Generator">
+  <title>MMSS Metacrystal Variation Generator</title>
+  <desc>Seven colour-coded variation points orbit a central hexagon (the robust kernel). Each 2s a different point is selected: it grows and flashes amber — the just-in-time application of one minimal combination. The other six stay visible in their family colours — the generator keeps exploration alternatives open. The hexagon stroke cycles cyan→amber→violet (task-adaptive). Slow clockwise rotation 42s = 3 selections per revolution. Background completes one counter-clockwise turn at standard 44s pace, then freezes. Only rotate / opacity / r / fill / stroke animations.</desc>
+
+  <!-- Background -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A"/>
+
+  <!-- Background boundary: 1 CCW turn at 44s, then freeze -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 32 32" to="-360 32 32"
+      dur="44s" fill="freeze"/>
+    <circle cx="32" cy="32" r="30" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="1.5 2.5" opacity="0.45"/>
+  </g>
+
+  <!-- Halo -->
+  <circle cx="32" cy="32" r="28" stroke="#6366F1" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Static orbit guide -->
+  <circle cx="32" cy="32" r="20" stroke="#374151" stroke-width="0.3" stroke-dasharray="1 2" opacity="0.4"/>
+
+  <!-- Rotating crystal with 7 variation points -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="42s" repeatCount="indefinite"/>
+
+    <!-- P0 cyan: top -->
+    <circle cx="32" cy="12" r="1.3" fill="#22D3EE">
+      <animate attributeName="fill"
+        values="#22D3EE;#22D3EE;#F59E0B;#22D3EE;#22D3EE"
+        keyTimes="0;0.02;0.06;0.10;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.02;0.06;0.10;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P1 violet -->
+    <circle cx="47.63" cy="19.53" r="1.3" fill="#A78BFA">
+      <animate attributeName="fill"
+        values="#A78BFA;#A78BFA;#F59E0B;#A78BFA;#A78BFA"
+        keyTimes="0;0.16;0.20;0.24;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.16;0.20;0.24;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P2 indigo -->
+    <circle cx="51.51" cy="36.43" r="1.3" fill="#818CF8">
+      <animate attributeName="fill"
+        values="#818CF8;#818CF8;#F59E0B;#818CF8;#818CF8"
+        keyTimes="0;0.30;0.34;0.38;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.30;0.34;0.38;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P3 green -->
+    <circle cx="40.68" cy="50.02" r="1.3" fill="#34D399">
+      <animate attributeName="fill"
+        values="#34D399;#34D399;#F59E0B;#34D399;#34D399"
+        keyTimes="0;0.44;0.48;0.52;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.44;0.48;0.52;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P4 light -->
+    <circle cx="23.32" cy="50.02" r="1.3" fill="#E0E7FF">
+      <animate attributeName="fill"
+        values="#E0E7FF;#E0E7FF;#F59E0B;#E0E7FF;#E0E7FF"
+        keyTimes="0;0.58;0.62;0.66;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.58;0.62;0.66;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P5 orange -->
+    <circle cx="12.49" cy="36.43" r="1.3" fill="#FB923C">
+      <animate attributeName="fill"
+        values="#FB923C;#FB923C;#F59E0B;#FB923C;#FB923C"
+        keyTimes="0;0.72;0.76;0.80;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.72;0.76;0.80;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- P6 amber -->
+    <circle cx="16.37" cy="19.53" r="1.3" fill="#F59E0B">
+      <animate attributeName="fill"
+        values="#F59E0B;#F59E0B;#FBBF24;#F59E0B;#F59E0B"
+        keyTimes="0;0.86;0.90;0.94;1"
+        dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="r"
+        values="1.3;1.3;1.9;1.3;1.3"
+        keyTimes="0;0.86;0.90;0.94;1"
+        dur="14s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Hexagon center: task-adaptive kernel, stroke cycles cyan→amber→violet -->
+  <g transform="translate(32 32)">
+    <polygon points="0,-5 4.3,-2.5 4.3,2.5 0,5 -4.3,2.5 -4.3,-2.5"
+      stroke="#22D3EE" stroke-width="0.55" fill="none">
+      <animate attributeName="stroke"
+        values="#22D3EE;#F59E0B;#A78BFA;#22D3EE"
+        dur="9s" repeatCount="indefinite"/>
+    </polygon>
+    <circle r="0.7" fill="#F59E0B"/>
+  </g>
+</svg>
